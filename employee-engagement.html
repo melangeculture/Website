@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#071327">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" type="image/png" href="logo-new.png">
+<link rel="apple-touch-icon" href="logo-new.png">
+<title>Employee Engagement — Belonging, Recognition & Retention | Mélange Culture</title>
+<meta name="description" content="Mélange Culture's Employee Engagement pillar builds belonging, recognition and advocacy inside growing organisations. Strategic onboarding, R&R, communities and alumni brand.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://melangeculture.com/employee-engagement.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://melangeculture.com/employee-engagement.html">
+<meta property="og:title" content="Employee Engagement — Belonging & Retention | Mélange Culture">
+<meta property="og:description" content="Building belonging, recognition and advocacy inside growing Indian organisations. Nine integrated service lines.">
+<meta property="og:image" content="https://melangeculture.com/logo-new.png">
+<meta property="og:site_name" content="Mélange Culture">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Employee Engagement | Mélange Culture">
+<meta name="twitter:description" content="Building belonging, recognition and advocacy inside growing Indian organisations.">
+<meta name="twitter:image" content="https://melangeculture.com/logo-new.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Employee Engagement — Mélange Culture","url":"https://melangeculture.com/employee-engagement.html","description":"Strategic employee engagement: onboarding, rewards & recognition, communities, and alumni brand for growing organisations.","provider":{"@type":"Organization","name":"Mélange Culture","url":"https://melangeculture.com"}}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0B1C3A;--navy-deep:#071327;--crimson:#780014;--crimson-light:#9a0019;--gold:#b8872a;--gold-light:#d4a843;--green:#a8d4a0;--cream:#f9f5ef;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+  body{font-family:var(--sans);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+  a,button{-webkit-tap-highlight-color:transparent;}
+  input,select,textarea{font-size:16px;border-radius:0;-webkit-appearance:none;appearance:none;}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
+  .reveal.visible{opacity:1;transform:translateY(0);}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,19,39,.97);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(184,135,42,.15);}
+  .nav-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;height:72px;display:flex;align-items:center;justify-content:space-between;}
+  .nav-logo img{height:42px;width:auto;display:block;}
+  .nav-links{display:flex;align-items:center;gap:.25rem;list-style:none;}
+  .nav-pill{padding:.45rem 1.1rem;font-size:.8rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:rgba(249,245,239,.6);border:1px solid transparent;transition:all .2s;}
+  .nav-pill:hover,.nav-pill.active{color:var(--gold-light);border-color:rgba(184,135,42,.3);background:rgba(184,135,42,.06);}
+  .nav-back{font-size:.78rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:rgba(249,245,239,.5);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:.5rem;}
+  .nav-back:hover{color:var(--gold-light);}
+  .nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;padding:6px;cursor:pointer;background:none;border:none;-webkit-tap-highlight-color:transparent;}
+  .nav-hamburger span{display:block;height:1.5px;background:rgba(249,245,239,.75);transition:transform .3s cubic-bezier(.16,1,.3,1),opacity .2s;}
+  .nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+  .nav-hamburger.open span:nth-child(2){opacity:0;}
+  .nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+  .mobile-menu{display:none;position:fixed;inset:0;z-index:99;background:rgba(7,19,39,.98);flex-direction:column;justify-content:center;align-items:center;gap:2rem;padding:2rem;padding-top:max(2rem,env(safe-area-inset-top));padding-bottom:max(2rem,env(safe-area-inset-bottom));}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{font-family:var(--serif);font-size:clamp(1.6rem,6vw,2.5rem);font-weight:300;color:rgba(249,245,239,.75);text-decoration:none;transition:color .2s;}
+  .mobile-menu a:hover{color:var(--gold-light);}
+  .mob-cta{background:var(--crimson)!important;color:#fff!important;font-family:var(--sans)!important;font-size:.85rem!important;font-weight:500!important;letter-spacing:.1em!important;text-transform:uppercase!important;padding:.85rem 2rem!important;}
+  @media(max-width:640px){.nav-links{display:none;}.nav-back{display:none;}.nav-hamburger{display:flex;}.nav-inner{padding:0 1.25rem;}}
+
+  .hero{position:relative;min-height:72vh;display:flex;align-items:flex-end;background:var(--navy-deep);overflow:hidden;}
+  .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 70% 30%,rgba(168,212,160,.12) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 15% 80%,rgba(120,0,20,.12) 0%,transparent 50%);}
+  .hero-grain{position:absolute;inset:0;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  .hero-content{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:9rem 2.5rem 5rem;width:100%;}
+  .pillar-badge{display:inline-flex;align-items:center;gap:.6rem;padding:.35rem 1rem .35rem .5rem;border:1px solid rgba(168,212,160,.35);font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:2rem;}
+  .badge-dot{width:8px;height:8px;border-radius:50%;background:var(--green);}
+  h1.pillar-heading{font-family:var(--serif);font-weight:300;font-size:clamp(3rem,6vw,6.5rem);letter-spacing:-.03em;line-height:1.04;color:var(--cream);margin-bottom:1.5rem;}
+  h1.pillar-heading em{font-style:italic;color:var(--green);}
+  .pillar-tagline{font-family:var(--serif);font-style:italic;font-size:1.15rem;font-weight:400;color:rgba(249,245,239,.58);padding-left:1.25rem;border-left:2px solid var(--crimson);margin-bottom:3rem;max-width:560px;line-height:1.6;}
+  .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(168,212,160,.1);border:1px solid rgba(168,212,160,.1);}
+  .hs{padding:1.5rem;background:rgba(7,19,39,.7);}
+  .hs-num{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--green);letter-spacing:-.02em;line-height:1;margin-bottom:.3rem;}
+  .hs-label{font-size:.7rem;font-weight:400;letter-spacing:.07em;text-transform:uppercase;color:rgba(249,245,239,.42);line-height:1.4;}
+
+  .sec{padding:6rem 0;}
+  .sec-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;}
+  .eyebrow{display:inline-flex;align-items:center;gap:.75rem;margin-bottom:1rem;}
+  .eyebrow-dot{width:6px;height:6px;border-radius:50%;}
+  .eyebrow-txt{font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;}
+  h2.sh{font-family:var(--serif);font-weight:300;font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.025em;line-height:1.1;color:var(--navy);margin-bottom:1.25rem;}
+  h2.sh em{font-style:italic;color:var(--crimson);}
+  .sub{font-size:.93rem;font-weight:300;line-height:1.82;color:#4a4038;max-width:640px;margin-bottom:3rem;}
+
+  .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,.07);}
+  .layer-card{background:#fff;padding:2.5rem 2rem;border-top:3px solid;}
+  .lc-n{font-size:.72rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;opacity:.4;margin-bottom:.5rem;}
+  .lc-t{font-family:var(--serif);font-size:1.75rem;font-weight:400;color:var(--navy);margin-bottom:.4rem;}
+  .lc-sub{font-size:.75rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#8a7a6e;margin-bottom:1.25rem;}
+  .lc-body{font-size:.9rem;font-weight:300;line-height:1.8;color:#4a4038;}
+
+  /* LAYER SECTION */
+  .layer-section{padding:5.5rem 0;}
+  .layer-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;}
+  .layer-header{margin-bottom:3rem;}
+  .layer-tag{display:inline-flex;align-items:center;gap:.6rem;padding:.3rem .9rem .3rem .4rem;font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;border:1px solid;margin-bottom:1.25rem;}
+  h3.layer-h{font-family:var(--serif);font-weight:300;font-size:clamp(1.8rem,3.5vw,2.8rem);letter-spacing:-.025em;line-height:1.1;color:var(--navy);margin-bottom:.75rem;}
+  .layer-desc{font-size:.93rem;font-weight:300;line-height:1.75;color:#4a4038;max-width:560px;}
+
+  /* SL CARDS — ENGAGEMENT */
+  .sl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,.07);}
+  .sl-card{background:#fff;padding:2rem 1.75rem;transition:background .25s,transform .25s cubic-bezier(.16,1,.3,1);}
+  .sl-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.1);z-index:2;position:relative;}
+  .sl-num{font-family:var(--serif);font-size:1.5rem;font-weight:300;opacity:.2;margin-bottom:1rem;}
+  .sl-lbl{font-size:.65rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.5rem;}
+  .sl-ttl{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--navy);margin-bottom:.4rem;line-height:1.25;}
+  .sl-for{font-size:.7rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#8a7a6e;margin-bottom:1rem;}
+  .sl-body{font-size:.84rem;font-weight:300;line-height:1.72;color:#4a4038;margin-bottom:1.25rem;}
+  .sl-items{list-style:none;margin-bottom:0;}
+  .sl-items li{font-size:.79rem;font-weight:300;color:#4a4038;padding:.3rem 0;border-bottom:1px solid rgba(0,0,0,.05);display:flex;align-items:flex-start;gap:.45rem;}
+  .sl-items li::before{content:'·';flex-shrink:0;font-size:1.1rem;line-height:1;}
+
+  /* DARK */
+  .dark{background:var(--navy);padding:6rem 0;}
+  .dark-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;}
+  .bc{background:var(--navy);padding:2rem;transition:background .2s;}
+  .bc:hover{background:rgba(255,255,255,.05);}
+  .bc-n{font-family:var(--serif);font-size:2rem;font-weight:300;color:rgba(168,212,160,.2);margin-bottom:.85rem;}
+  .bc-t{font-family:var(--serif);font-size:1.15rem;font-weight:500;color:var(--cream);margin-bottom:.6rem;}
+  .bc-b{font-size:.86rem;font-weight:300;line-height:1.75;color:rgba(249,245,239,.46);}
+
+  /* IMPACT */
+  .impact{background:var(--crimson);padding:4rem 0;}
+  .impact-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.1);}
+  .ii{padding:2rem 1.75rem;background:var(--crimson);text-align:center;}
+  .ii-num{font-family:var(--serif);font-size:3rem;font-weight:300;color:#fff;letter-spacing:-.03em;line-height:1;margin-bottom:.4rem;}
+  .ii-lbl{font-size:.73rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);line-height:1.4;}
+
+  /* PILLAR NAV */
+  .pnav{background:var(--navy-deep);border-top:1px solid rgba(184,135,42,.1);padding:3rem 0;}
+  .pnav-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+  .pnav-card{padding:2rem;border:1px solid rgba(184,135,42,.1);text-decoration:none;transition:border-color .2s,background .2s;display:block;}
+  .pnav-card:hover{border-color:rgba(184,135,42,.3);background:rgba(255,255,255,.03);}
+  .pnav-dir{font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(249,245,239,.3);margin-bottom:.5rem;}
+  .pnav-name{font-family:var(--serif);font-size:1.4rem;font-weight:400;color:var(--cream);}
+  .pnav-desc{font-size:.83rem;font-weight:300;color:rgba(249,245,239,.4);margin-top:.5rem;line-height:1.6;}
+
+  .footer{background:var(--navy-deep);padding:2.5rem;border-top:1px solid rgba(184,135,42,.08);}
+  .footer-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+  .footer-brand{font-family:var(--serif);font-size:1.2rem;font-weight:300;color:var(--cream);}
+  .flinks{display:flex;gap:1.5rem;list-style:none;}
+  .flinks a{font-size:.78rem;font-weight:300;color:rgba(249,245,239,.35);text-decoration:none;transition:color .2s;}
+  .flinks a:hover{color:var(--gold-light);}
+  .footer-copy{font-size:.75rem;font-weight:300;color:rgba(249,245,239,.25);}
+
+  @media(max-width:1024px){.hero-stats{grid-template-columns:1fr 1fr;}.g3,.sl-grid{grid-template-columns:1fr 1fr;}.impact-inner{grid-template-columns:1fr 1fr;}.pnav-inner{grid-template-columns:1fr;}.footer-inner{flex-direction:column;text-align:center;}}
+  @media(max-width:640px){.nav-links{display:none;}.g3,.sl-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="logo-new.png" alt="Mélange Culture" height="42" width="auto"></a>
+    <ul class="nav-links">
+      <li><a href="finishing-school.html" class="nav-pill">Finishing School</a></li>
+      <li><a href="employee-engagement.html" class="nav-pill active">Employee Engagement</a></li>
+    </ul>
+    <a href="index.html" class="nav-back">← Home</a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+  <a href="finishing-school.html">Finishing School</a>
+  <a href="employee-engagement.html">Employee Engagement</a>
+  <a href="index.html">Home</a>
+  <a href="index.html#contact" class="mob-cta">Get in Touch</a>
+</div>
+
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-grain"></div>
+  <div class="hero-content">
+    <div class="pillar-badge reveal"><div class="badge-dot"></div>Pillar 03 · B2B Strategic</div>
+    <h1 class="pillar-heading reveal" style="transition-delay:.1s">Build the Conditions<br>That Make People<br><em>Choose to Stay</em></h1>
+    <p class="pillar-tagline reveal" style="transition-delay:.2s">"We don't run engagement programmes. We build the conditions that make people choose to stay — and tell others to join."</p>
+    <div class="hero-stats reveal" style="transition-delay:.3s">
+      <div class="hs"><div class="hs-num">3,200 Cr</div><div class="hs-label">India engagement market — 19% CAGR</div></div>
+      <div class="hs"><div class="hs-num">68%</div><div class="hs-label">Indian employees disengaged — Gallup 2024</div></div>
+      <div class="hs"><div class="hs-num">35%+</div><div class="hs-label">First-year attrition without structured engagement</div></div>
+      <div class="hs"><div class="hs-num">3.2×</div><div class="hs-label">ROI on every rupee invested in engagement</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="sec" style="background:var(--cream)">
+  <div class="sec-inner">
+    <div class="eyebrow reveal"><div class="eyebrow-dot" style="background:var(--crimson)"></div><span class="eyebrow-txt" style="color:var(--crimson)">The Strategic Completion</span></div>
+    <h2 class="sh reveal" style="transition-delay:.1s">Compliance Doesn't Create Belonging.<br>Training Doesn't <em>Create Culture.</em></h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start" class="reveal" style="transition-delay:.15s">
+      <div>
+        <p style="font-size:.95rem;font-weight:300;line-height:1.85;color:#4a4038;margin-bottom:1.25rem;">Compliant HR, accurate payroll, trained new joiners — and still 35% attrition in year one. Because compliance does not create belonging. Training does not create culture.</p>
+        <p style="font-size:.95rem;font-weight:300;line-height:1.85;color:#4a4038;">Pillar 3 closes the final loop — the deliberate architecture of belonging, recognition, community, wellness, and employer brand.</p>
+      </div>
+      <div>
+        <div style="padding:2rem;background:var(--navy);">
+          <div style="font-size:.7rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin-bottom:.75rem;">The Mélange Position</div>
+          <p style="font-family:var(--serif);font-style:italic;font-size:1.05rem;font-weight:300;color:var(--cream);line-height:1.65;">Engagement is not a programme. It is an <span style="color:var(--green);">architecture</span> — built deliberately, measured consistently, and evolved as the organisation changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="sec" style="background:#f0f4f8">
+  <div class="sec-inner">
+    <div class="eyebrow reveal"><div class="eyebrow-dot" style="background:var(--crimson)"></div><span class="eyebrow-txt" style="color:var(--crimson)">The Engagement Method</span></div>
+    <h2 class="sh reveal" style="transition-delay:.1s">Three Layers.<br>One Engagement Architecture.</h2>
+    <p class="sub reveal" style="transition-delay:.15s">Most vendors work at the surface — events, surveys, perks. The Mélange Method works from the foundation up: belonging first, then recognition, then advocacy.</p>
+    <div class="g3">
+      <div class="layer-card reveal" style="border-color:var(--crimson);transition-delay:.05s">
+        <div class="lc-n">Layer One</div><div class="lc-t">Belonging</div>
+        <div class="lc-sub">The experience of being seen</div>
+        <p class="lc-body">Built through deliberate acts — a pre-boarding experience that says "you were expected," an onboarding that connects people to the culture, a community that knows them beyond their job title.</p>
+      </div>
+      <div class="layer-card reveal" style="border-color:var(--gold);transition-delay:.1s">
+        <div class="lc-n">Layer Two</div><div class="lc-t">Recognition</div>
+        <div class="lc-sub">The experience of being valued</div>
+        <p class="lc-body">The highest-return, lowest-cost retention investment available. Structured R&R reduces voluntary attrition by 23–31% in the first year.</p>
+      </div>
+      <div class="layer-card reveal" style="border-color:var(--navy);transition-delay:.15s">
+        <div class="lc-n">Layer Three</div><div class="lc-t">Advocacy</div>
+        <div class="lc-sub">Employees as employer brand</div>
+        <p class="lc-body">Belonging and recognition so consistent that employees become the organisation's most credible talent marketing channel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BELONGING LAYER -->
+<section class="layer-section" style="background:var(--cream)" id="onboarding">
+  <div class="layer-inner">
+    <div class="layer-header">
+      <div class="layer-tag reveal" style="color:var(--crimson);border-color:rgba(120,0,20,.25)">
+        <div style="width:6px;height:6px;border-radius:50%;background:var(--crimson)"></div>Layer 1 — Belonging
+      </div>
+      <h3 class="layer-h reveal" style="transition-delay:.1s">The Experience of Being Seen</h3>
+      <p class="layer-desc reveal" style="transition-delay:.15s">Built deliberately — through pre-boarding, strategic onboarding, and measurement that surfaces what is actually happening.</p>
+    </div>
+    <div class="sl-grid">
+      <div class="sl-card reveal" style="transition-delay:.05s;border-top:2px solid var(--crimson)">
+        <div class="sl-num">01</div>
+        <div class="sl-lbl" style="color:var(--crimson)">Belonging</div>
+        <div class="sl-ttl">Pre-Boarding & Offer-to-Joining</div>
+        <div class="sl-for">The 30–90 days before Day 1</div>
+        <p class="sl-body">20–40% of accepted offers never reach Day 1. The pre-boarding window is the highest-leverage, lowest-cost engagement investment — almost no one uses it deliberately.</p>
+        <ul class="sl-items">
+          <li style="--dot-c:var(--crimson)">Personalised welcome sequence — offer to Day 1</li>
+          <li>Pre-boarding digital kit — culture content, team intros</li>
+          <li>Manager prep protocol — briefing before they arrive</li>
+          <li>Sentiment check at Day 7 and Day 21 post-offer</li>
+          <li>Buddy assignment — peer connection before Day 1</li>
+        </ul>
+      </div>
+      <div class="sl-card reveal" style="transition-delay:.1s;border-top:2px solid #8b4a6a">
+        <div class="sl-num">02</div>
+        <div class="sl-lbl" style="color:#8b4a6a">Belonging</div>
+        <div class="sl-ttl">Strategic Onboarding & Cultural Assimilation</div>
+        <div class="sl-for">The first 90 days</div>
+        <p class="sl-body">Most voluntary exits are decided in the first 90 days — not because the work was hard, but because the person never found their footing in the culture.</p>
+        <ul class="sl-items">
+          <li>30-60-90 day journey — designed arc with milestones</li>
+          <li>Culture immersion sessions — how the org actually works</li>
+          <li>Onboarding cohort design — new joiners bonding together</li>
+          <li>Manager onboarding playbook — week-by-week guide</li>
+          <li>90-day check-in identifying at-risk employees</li>
+        </ul>
+      </div>
+      <div class="sl-card reveal" style="transition-delay:.15s;border-top:2px solid #6a3a8a">
+        <div class="sl-num">03</div>
+        <div class="sl-lbl" style="color:#6a3a8a">Belonging</div>
+        <div class="sl-ttl">ESAT, eNPS & Pulse Surveys</div>
+        <div class="sl-for">Continuous measurement</div>
+        <p class="sl-body">Mélange ESAT is designed for truth, not comfort — finding out what is actually happening so something can actually change.</p>
+        <ul class="sl-items">
+          <li>Annual ESAT — custom, quantitative and qualitative</li>
+          <li>eNPS — directional trajectory of engagement</li>
+          <li>Quarterly pulse — 5–8 questions, early warning system</li>
+          <li>Culture diagnostic — focus groups and interviews</li>
+          <li>Action planning facilitation — Mélange co-designs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECOGNITION LAYER -->
+<section class="layer-section" style="background:#faf6f0" id="recognition">
+  <div class="layer-inner">
+    <div class="layer-header">
+      <div class="layer-tag reveal" style="color:var(--gold);border-color:rgba(184,135,42,.25)">
+        <div style="width:6px;height:6px;border-radius:50%;background:var(--gold)"></div>Layer 2 — Recognition
+      </div>
+      <h3 class="layer-h reveal" style="transition-delay:.1s">The Experience of Being Valued</h3>
+      <p class="layer-desc reveal" style="transition-delay:.15s">High performers leave when they feel unseen. Structured recognition reduces voluntary attrition by 23–31% in the first year.</p>
+    </div>
+    <div class="sl-grid">
+      <div class="sl-card reveal" style="transition-delay:.05s;border-top:2px solid var(--gold)">
+        <div class="sl-num">04</div>
+        <div class="sl-lbl" style="color:var(--gold)">Recognition</div>
+        <div class="sl-ttl">Rewards & Recognition Programmes</div>
+        <div class="sl-for">Any org with informal or absent R&R</div>
+        <p class="sl-body">The highest-return, lowest-cost retention investment available. Most organisations leave it entirely to manager discretion — we build the system.</p>
+        <ul class="sl-items">
+          <li>R&R framework — peer-to-peer, manager, company-wide</li>
+          <li>Milestone celebration — Day 1, Month 1, Year 1, 3, 5</li>
+          <li>Performance-linked recognition tied to PMS</li>
+          <li>Spot recognition tools — real-time, no bureaucracy</li>
+          <li>Recognition analytics — frequency and distribution equity</li>
+        </ul>
+      </div>
+      <div class="sl-card reveal" style="transition-delay:.1s;border-top:2px solid #6a8a3a">
+        <div class="sl-num">05</div>
+        <div class="sl-lbl" style="color:#6a8a3a">Recognition</div>
+        <div class="sl-ttl">Culture & Morale Initiatives</div>
+        <div class="sl-for">All engagement retainer clients</div>
+        <p class="sl-body">Fun at work is a signal — it tells people whether the organisation sees them as humans. Programmes designed to reinforce, not contradict, the culture being built.</p>
+        <ul class="sl-items">
+          <li>12-month engagement calendar design</li>
+          <li>Team offsites — balancing genuine fun with culture work</li>
+          <li>All-hands and town hall design</li>
+          <li>Festive and seasonal campaigns</li>
+          <li>Manager toolkit for informal culture-building</li>
+        </ul>
+      </div>
+      <div class="sl-card reveal" style="transition-delay:.15s;border-top:2px solid #3a6a8a">
+        <div class="sl-num">06</div>
+        <div class="sl-lbl" style="color:#3a6a8a">Recognition</div>
+        <div class="sl-ttl">BRGs & Employee Resource Groups</div>
+        <div class="sl-for">GCCs, Series B+, inclusion-committed orgs</div>
+        <p class="sl-body">The most underused retention tool in Indian workplaces — inclusion built into the architecture, not bolted on.</p>
+        <ul class="sl-items">
+          <li>BRG/ERG design — charter and governance</li>
+          <li>Launch facilitation (critical first 90 days)</li>
+          <li>BRG leadership coaching</li>
+          <li>Cross-BRG programming — coherent inclusion narrative</li>
+          <li>BRG impact measurement — membership, retention correlation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVOCACY LAYER -->
+<section class="layer-section" style="background:var(--cream)" id="communities">
+  <div class="layer-inner">
+    <div class="layer-header">
+      <div class="layer-tag reveal" style="color:var(--navy);border-color:rgba(11,28,58,.2)">
+        <div style="width:6px;height:6px;border-radius:50%;background:var(--navy)"></div>Layer 3 — Advocacy
+      </div>
+      <h3 class="layer-h reveal" style="transition-delay:.1s">Employees Who Become Your Best Recruiters</h3>
+      <p class="layer-desc reveal" style="transition-delay:.15s">The employee experience is the employer brand — every moment from pre-boarding to alumni network is a talent marketing moment.</p>
+    </div>
+    <div class="sl-grid">
+      <div class="sl-card reveal" style="transition-delay:.05s;border-top:2px solid var(--navy)">
+        <div class="sl-num">07</div>
+        <div class="sl-lbl" style="color:var(--navy)">Advocacy</div>
+        <div class="sl-ttl">Internal Communities & Hobby Clubs</div>
+        <div class="sl-for">All engagement retainer clients</div>
+        <p class="sl-body">When people find colleagues who share their life outside work, they find a reason to stay that compensation cannot replicate.</p>
+        <ul class="sl-items">
+          <li>Community mapping — from onboarding and ESAT data</li>
+          <li>Launch and facilitation — scaffolding for first few months</li>
+          <li>Digital community infrastructure — Slack, Teams, etc.</li>
+          <li>Cross-community programming — connection across silos</li>
+          <li>Community health monitoring — membership and activity</li>
+        </ul>
+      </div>
+      <div class="sl-card reveal" style="transition-delay:.1s;border-top:2px solid var(--crimson)">
+        <div class="sl-num">08</div>
+        <div class="sl-lbl" style="color:var(--crimson)">Advocacy</div>
+        <div class="sl-ttl">Alumni Network & Employer Branding</div>
+        <div class="sl-for">High-attrition orgs; scaling companies</div>
+        <p class="sl-body">How people leave shapes who decides to join. Alumni who leave well become referral sources, rehire candidates, and brand advocates.</p>
+        <ul class="sl-items">
+          <li>Alumni network design — structure, platform, governance</li>
+          <li>EVP design — articulating what makes the org compelling</li>
+          <li>Employee story programme — authentic brand voices</li>
+          <li>Employer brand audit — Glassdoor, LinkedIn, word-of-mouth</li>
+          <li>Rehire pipeline management — cultivating likely returners</li>
+        </ul>
+      </div>
+      <div class="sl-card reveal" style="transition-delay:.15s;border-top:2px solid #5a3a6a">
+        <div class="sl-num">09</div>
+        <div class="sl-lbl" style="color:#5a3a6a">Advocacy</div>
+        <div class="sl-ttl">Wellness, Mental Health & Holistic Support</div>
+        <div class="sl-for">Fast-scaling organisations</div>
+        <p class="sl-body">Mental health is now the leading driver of unplanned absence in Indian workplaces. Wellness is the conviction that a person's whole life matters to their work.</p>
+        <ul class="sl-items">
+          <li>EAP partnership — sourcing, contracting, promoting access</li>
+          <li>Mental health awareness campaigns — 12-month calendar</li>
+          <li>Manager mental health literacy programme</li>
+          <li>Wellness assessment — physical, mental, financial</li>
+          <li>Return-to-work frameworks for medical or mental health leave</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<div class="impact">
+  <div class="impact-inner">
+    <div class="ii reveal"><div class="ii-num" data-target="88" data-suffix="%+">88%+</div><div class="ii-lbl">Offer-to-joining conversion benchmark</div></div>
+    <div class="ii reveal" style="transition-delay:.1s"><div class="ii-num">&lt;8%</div><div class="ii-lbl">90-day attrition vs. 18–22% industry</div></div>
+    <div class="ii reveal" style="transition-delay:.2s"><div class="ii-num" data-target="30" data-suffix="%+">30%+</div><div class="ii-lbl">Referral hire rate target at 18 months</div></div>
+    <div class="ii reveal" style="transition-delay:.3s"><div class="ii-num">3.2×</div><div class="ii-lbl">ROI on structured engagement spend</div></div>
+  </div>
+</div>
+
+<!-- BELIEFS -->
+<section class="dark">
+  <div class="dark-inner">
+    <div style="display:flex;align-items:center;gap:.75rem;font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:1rem;" class="reveal">
+      <div style="width:32px;height:1px;background:var(--green)"></div>What We Believe
+    </div>
+    <h2 style="font-family:var(--serif);font-weight:300;font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.025em;line-height:1.1;color:var(--cream);margin-bottom:3rem;" class="reveal" style="transition-delay:.1s">Three Principles Behind<br><span style="font-style:italic;color:var(--green)">Every Engagement</span></h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(168,212,160,.1)">
+      <div class="bc reveal" style="transition-delay:.05s"><div class="bc-n">01</div><div class="bc-t">Belonging is built, not felt</div><p class="bc-b">No one belongs to a workplace by accident. It is the outcome of deliberate acts — pre-boarding messages, communities that know a person beyond their job title.</p></div>
+      <div class="bc reveal" style="transition-delay:.1s"><div class="bc-n">02</div><div class="bc-t">Engagement without measurement is decoration</div><p class="bc-b">The ESAT cycle and 90-day attrition report are the mechanisms by which engagement investment becomes defensible. We will not design a programme we cannot measure.</p></div>
+      <div class="bc reveal" style="transition-delay:.15s"><div class="bc-n">03</div><div class="bc-t">The employee experience is the employer brand</div><p class="bc-b">What candidates hear from employees is more credible than anything the organisation publishes. Every engagement moment is a brand moment.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLAR NAV -->
+<div class="pnav">
+  <div class="pnav-inner">
+    <a href="finishing-school.html" class="pnav-card reveal">
+      <div class="pnav-dir">← Previous Pillar</div>
+      <div class="pnav-name">Pillar 01 — Finishing School</div>
+      <p class="pnav-desc">Campus-to-Corporate Transformation · B2C + Institutional</p>
+    </a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">Mélange Culture</div>
+    <ul class="flinks"><li><a href="index.html">Home</a></li><li><a href="finishing-school.html">Finishing School</a></li></ul>
+    <p class="footer-copy">© 2026 Mélange Culture. Hyderabad, India.</p>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);}}),{threshold:.07,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+function easeOutQuart(t){return 1-Math.pow(1-t,4);}
+function animateCounter(el){const raw=el.dataset.target;if(!raw)return;const target=parseFloat(raw),suffix=el.dataset.suffix||'',isDecimal=raw.includes('.');const dur=1800,start=performance.now();function step(now){const p=Math.min((now-start)/dur,1);el.textContent=(isDecimal?((target*easeOutQuart(p)).toFixed(1)):(Math.round(target*easeOutQuart(p))))+suffix;if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+const cio=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){animateCounter(x.target);cio.unobserve(x.target);}}),{threshold:.5});
+document.querySelectorAll('[data-target]').forEach(el=>cio.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();closeMob();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'});}}));
+const ham=document.getElementById('navHamburger'),mob=document.getElementById('mobileMenu');
+function closeMob(){ham.classList.remove('open');mob.classList.remove('open');ham.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+ham.addEventListener('click',()=>{const o=mob.classList.toggle('open');ham.classList.toggle('open',o);ham.setAttribute('aria-expanded',String(o));document.body.style.overflow=o?'hidden':'';});
+mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMob));
+</script>
+</body>
+</html>

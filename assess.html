@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#071327">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" type="image/png" href="logo-new.png">
+<link rel="apple-touch-icon" href="logo-new.png">
+<title>Free Corporate Readiness Assessment — AssessAI | Mélange Culture</title>
+<meta name="description" content="Take Mélange Culture's free Corporate Readiness Assessment. Get your personalised DISC+R score across Drive, Influence, Steadiness, Compliance and Resilience. Results on WhatsApp.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://melangeculture.com/assess.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://melangeculture.com/assess.html">
+<meta property="og:title" content="Free Corporate Readiness Assessment | Mélange Culture">
+<meta property="og:description" content="8 questions. 5 dimensions. Your personalised readiness score — sent to your WhatsApp. Free.">
+<meta property="og:image" content="https://melangeculture.com/logo-new.png">
+<meta property="og:site_name" content="Mélange Culture">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Corporate Readiness Assessment | Mélange Culture">
+<meta name="twitter:description" content="8 questions. 5 dimensions. Your personalised readiness score. Free.">
+<meta name="twitter:image" content="https://melangeculture.com/logo-new.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1C3A;--navy-d:#071327;--crimson:#780014;--gold:#b8872a;--gold-l:#d4a843;--cream:#f9f5ef;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{height:100%;-webkit-text-size-adjust:100%;}
+body{font-family:var(--sans);background:var(--navy-d);color:var(--cream);min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+a,button{-webkit-tap-highlight-color:transparent;}
+input,select,textarea{font-size:16px!important;border-radius:0;-webkit-appearance:none;appearance:none;}
+
+/* SCREENS */
+.scr{display:none;min-height:100vh;flex-direction:column;}
+.scr.on{display:flex;animation:fi .4s ease;}
+@keyframes fi{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── SIGN IN ── */
+.si-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;
+  background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(184,135,42,.12) 0%,transparent 60%),
+             radial-gradient(ellipse 40% 40% at 80% 80%,rgba(120,0,20,.1) 0%,transparent 50%),var(--navy-d);}
+.si-logo{height:44px;margin-bottom:2rem;}
+.ai-badge{display:inline-flex;align-items:center;gap:.55rem;padding:.3rem .9rem;border:1px solid rgba(184,135,42,.35);
+  font-size:.68rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-l);margin-bottom:1.5rem;}
+.ai-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.si-title{font-family:var(--serif);font-weight:300;font-size:clamp(2.2rem,6vw,3.8rem);letter-spacing:-.03em;
+  line-height:1.05;color:var(--cream);text-align:center;margin-bottom:.65rem;}
+.si-title em{font-style:italic;color:var(--gold-l);}
+.si-sub{font-size:.88rem;font-weight:300;color:rgba(249,245,239,.48);text-align:center;max-width:380px;line-height:1.65;margin-bottom:2.5rem;}
+.si-card{background:rgba(255,255,255,.04);border:1px solid rgba(184,135,42,.15);padding:2.25rem;width:100%;max-width:420px;}
+.fl{display:block;font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(249,245,239,.42);margin-bottom:.45rem;}
+.fi{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(184,135,42,.18);color:var(--cream);
+  font-family:var(--sans);font-size:.9rem;font-weight:300;padding:.82rem 1rem;outline:none;
+  transition:border-color .2s;margin-bottom:1.1rem;-webkit-appearance:none;border-radius:0;}
+.fi::placeholder{color:rgba(249,245,239,.22);}
+.fi:focus{border-color:rgba(184,135,42,.5);}
+.ph-row{display:flex;gap:.5rem;}
+.ph-pre{background:rgba(184,135,42,.1);border:1px solid rgba(184,135,42,.18);color:var(--gold-l);
+  font-family:var(--sans);font-size:.9rem;padding:.82rem .8rem;width:64px;flex-shrink:0;text-align:center;}
+.fe{font-size:.72rem;color:#f87171;margin-top:-.75rem;margin-bottom:.85rem;display:none;}
+.btn-p{width:100%;background:var(--gold);color:var(--navy-d);border:none;font-family:var(--sans);
+  font-size:.83rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:1rem;
+  cursor:pointer;transition:background .2s;margin-top:.5rem;}
+.btn-p:hover{background:var(--gold-l);}
+.si-terms{font-size:.7rem;color:rgba(249,245,239,.22);text-align:center;margin-top:1rem;line-height:1.6;}
+
+/* ── INTRO ── */
+.in-wrap{flex:1;display:flex;flex-direction:column;align-items:center;padding:4rem 2rem 3rem;
+  max-width:780px;margin:0 auto;width:100%;}
+.in-greet{font-size:.88rem;font-weight:300;color:var(--gold-l);margin-bottom:1.25rem;letter-spacing:.04em;}
+.in-head{font-family:var(--serif);font-weight:300;font-size:clamp(1.8rem,4vw,3rem);
+  letter-spacing:-.025em;line-height:1.15;text-align:center;color:var(--cream);margin-bottom:.85rem;}
+.in-head em{font-style:italic;color:var(--gold-l);}
+.in-desc{font-size:.88rem;font-weight:300;color:rgba(249,245,239,.52);text-align:center;
+  max-width:500px;line-height:1.75;margin-bottom:2.5rem;}
+.in-meta{display:flex;gap:2.5rem;margin-bottom:2.75rem;flex-wrap:wrap;justify-content:center;}
+.im{display:flex;flex-direction:column;align-items:center;gap:.25rem;}
+.im-v{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--gold-l);line-height:1;}
+.im-l{font-size:.66rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:rgba(249,245,239,.32);}
+.in-dims{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(184,135,42,.1);width:100%;margin-bottom:2.75rem;}
+.dc{background:rgba(255,255,255,.025);padding:1.25rem .75rem;display:flex;flex-direction:column;align-items:center;gap:.4rem;text-align:center;}
+.dc-ico{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.95rem;margin-bottom:.15rem;}
+.dc-n{font-size:.72rem;font-weight:500;color:var(--cream);line-height:1.35;}
+.dc-k{font-family:var(--serif);font-size:.7rem;font-weight:300;color:rgba(249,245,239,.32);font-style:italic;}
+.btn-s{background:var(--gold);color:var(--navy-d);border:none;font-family:var(--sans);
+  font-size:.83rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:1rem 3rem;cursor:pointer;transition:background .2s;}
+.btn-s:hover{background:var(--gold-l);}
+
+/* ── QUESTION ── */
+.q-nav{background:rgba(7,19,39,.97);border-bottom:1px solid rgba(184,135,42,.12);
+  padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.q-logo{height:30px;}
+.q-pw{flex:1;max-width:320px;margin:0 2rem;}
+.q-pb{height:3px;background:rgba(184,135,42,.13);border-radius:2px;overflow:hidden;margin-bottom:.3rem;}
+.q-pf{height:100%;background:var(--gold);border-radius:2px;transition:width .45s cubic-bezier(.4,0,.2,1);}
+.q-pl{font-size:.65rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:rgba(249,245,239,.28);text-align:right;}
+.q-body{flex:1;display:flex;flex-direction:column;align-items:flex-start;padding:2.5rem 2rem 1rem;max-width:720px;margin:0 auto;width:100%;}
+.q-tag{display:inline-flex;align-items:center;gap:.5rem;font-size:.66rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.q-tag::before{content:'';width:20px;height:1px;background:var(--gold);}
+.q-bignum{font-family:var(--serif);font-size:5rem;font-weight:300;letter-spacing:-.06em;
+  line-height:1;color:rgba(184,135,42,.1);margin-bottom:-.4rem;}
+.q-sc{font-family:var(--serif);font-weight:400;font-size:clamp(1.1rem,2.5vw,1.45rem);
+  line-height:1.62;color:var(--cream);margin-bottom:2.25rem;}
+.q-opts{display:flex;flex-direction:column;gap:.65rem;width:100%;}
+.q-opt{background:rgba(255,255,255,.03);border:1px solid rgba(184,135,42,.1);padding:1rem 1.4rem;
+  display:flex;align-items:flex-start;gap:.9rem;cursor:pointer;transition:all .18s;
+  text-align:left;width:100%;font-family:var(--sans);color:rgba(249,245,239,.65);
+  font-size:.88rem;font-weight:300;line-height:1.6;border-radius:0;}
+.q-opt:hover{background:rgba(184,135,42,.07);border-color:rgba(184,135,42,.28);color:var(--cream);}
+.q-opt.sel{background:rgba(184,135,42,.11);border-color:rgba(184,135,42,.48);color:var(--cream);}
+.q-opt.sel .ol{background:var(--gold);color:var(--navy-d);border-color:var(--gold);}
+.ol{min-width:26px;height:26px;border:1px solid rgba(184,135,42,.22);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:600;
+  color:rgba(184,135,42,.55);flex-shrink:0;transition:all .18s;margin-top:.1rem;}
+.q-foot{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2rem;
+  border-top:1px solid rgba(184,135,42,.08);max-width:720px;margin:0 auto;width:100%;gap:1rem;}
+.btn-bk{background:none;border:1px solid rgba(184,135,42,.18);color:rgba(249,245,239,.38);
+  font-family:var(--sans);font-size:.77rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;
+  padding:.7rem 1.4rem;cursor:pointer;transition:all .2s;}
+.btn-bk:hover{color:var(--gold-l);border-color:rgba(184,135,42,.4);}
+.btn-nx{background:var(--gold);color:var(--navy-d);border:none;font-family:var(--sans);
+  font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  padding:.82rem 2.25rem;cursor:pointer;transition:all .2s;opacity:.32;pointer-events:none;}
+.btn-nx.on{opacity:1;pointer-events:auto;}
+.btn-nx.on:hover{background:var(--gold-l);}
+
+/* ── RESULTS ── */
+.r-hero{background:var(--navy-d);padding:4rem 2rem;text-align:center;position:relative;overflow:hidden;}
+.r-hero::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 50% at 50% 50%,rgba(184,135,42,.1) 0%,transparent 60%);}
+.r-hi{position:relative;z-index:1;max-width:680px;margin:0 auto;}
+.r-greet{font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;}
+.r-title{font-family:var(--serif);font-weight:300;font-size:clamp(1.5rem,3.5vw,2.4rem);
+  color:var(--cream);margin-bottom:2.5rem;line-height:1.15;}
+.r-title em{font-style:italic;color:var(--gold-l);}
+.gauge-wrap{display:flex;flex-direction:column;align-items:center;margin-bottom:2rem;}
+.gauge-svg{width:180px;height:180px;}
+.g-bg{fill:none;stroke:rgba(255,255,255,.07);stroke-width:13;}
+.g-fill{fill:none;stroke:var(--gold);stroke-width:13;stroke-linecap:round;
+  transform:rotate(-90deg);transform-origin:50% 50%;transition:stroke-dasharray 1.6s cubic-bezier(.4,0,.2,1);}
+.g-num{font-family:var(--serif);font-weight:300;font-size:2.2rem;fill:var(--cream);letter-spacing:-.02em;}
+.g-sub{font-size:.78rem;fill:rgba(249,245,239,.36);font-family:var(--sans);}
+.r-badge{display:inline-flex;align-items:center;gap:.45rem;padding:.38rem 1.1rem;
+  font-size:.73rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-top:.75rem;border:1px solid;}
+.rb-hp{background:rgba(52,211,153,.12);color:#34d399;border-color:rgba(52,211,153,.28);}
+.rb-rd{background:rgba(96,165,250,.12);color:#60a5fa;border-color:rgba(96,165,250,.28);}
+.rb-dv{background:rgba(251,191,36,.12);color:#fbbf24;border-color:rgba(251,191,36,.28);}
+.rb-em{background:rgba(248,113,113,.12);color:#f87171;border-color:rgba(248,113,113,.28);}
+
+.r-sec{max-width:900px;margin:0 auto;padding:3rem 2rem;border-bottom:1px solid rgba(0,0,0,.07);background:var(--cream);color:var(--navy);}
+.r-sec:last-child{border-bottom:none;}
+.sec-ey{display:flex;align-items:center;gap:.65rem;margin-bottom:.65rem;}
+.sec-dot{width:6px;height:6px;border-radius:50%;}
+.sec-lbl{font-size:.68rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#7a6a60;}
+.sec-h{font-family:var(--serif);font-weight:300;font-size:clamp(1.5rem,3vw,2.2rem);
+  letter-spacing:-.025em;line-height:1.1;color:var(--navy);margin-bottom:2rem;}
+.sec-h em{font-style:italic;color:var(--crimson);}
+
+/* Dim grid */
+.dim-grid{display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:start;}
+.radar-wrap{position:relative;}
+#rc{width:100%;height:auto;display:block;}
+.dim-bars{display:flex;flex-direction:column;gap:1.1rem;}
+.dbr{}
+.dbh{display:flex;align-items:center;justify-content:space-between;margin-bottom:.38rem;}
+.dbn{font-size:.82rem;font-weight:500;color:var(--navy);display:flex;align-items:center;gap:.45rem;}
+.dbd{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.dbp{font-family:var(--serif);font-size:1.05rem;font-weight:400;color:var(--navy);}
+.dbt{height:5px;background:rgba(0,0,0,.07);border-radius:3px;overflow:hidden;}
+.dbf{height:100%;border-radius:3px;width:0;transition:width 1.3s cubic-bezier(.4,0,.2,1);}
+.dbs{font-size:.7rem;font-weight:300;color:#7a6a60;margin-top:.28rem;line-height:1.5;}
+
+/* Analysis */
+.an-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
+.an-card{padding:1.6rem;border-top:3px solid;}
+.an-str{background:rgba(52,211,153,.05);border-color:#34d399;}
+.an-gap{background:rgba(248,113,113,.05);border-color:#f87171;}
+.an-lbl{font-size:.66rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.65rem;}
+.an-str .an-lbl{color:#059669;}.an-gap .an-lbl{color:#dc2626;}
+.an-item{padding:.6rem 0;border-bottom:1px solid rgba(0,0,0,.06);}
+.an-item:last-child{border-bottom:none;}
+.an-n{font-size:.85rem;font-weight:500;color:var(--navy);margin-bottom:.2rem;}
+.an-d{font-size:.78rem;font-weight:300;color:#5a4e46;line-height:1.55;}
+
+/* Mélange pitch */
+.mp{background:var(--navy-d);color:var(--cream);padding:4rem 2rem;}
+.mp-in{max-width:900px;margin:0 auto;}
+.mp-ey{display:flex;align-items:center;gap:.65rem;font-size:.7rem;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem;}
+.mp-ey::before{content:'';width:26px;height:1px;background:var(--gold);}
+.mp-h{font-family:var(--serif);font-weight:300;font-size:clamp(1.8rem,4vw,3rem);
+  letter-spacing:-.025em;line-height:1.1;color:var(--cream);margin-bottom:.9rem;}
+.mp-h em{font-style:italic;color:var(--gold-l);}
+.mp-sub{font-size:.88rem;font-weight:300;color:rgba(249,245,239,.48);max-width:560px;line-height:1.75;margin-bottom:2.75rem;}
+.mp-recs{display:flex;flex-direction:column;gap:1px;margin-bottom:2.75rem;background:rgba(184,135,42,.08);}
+.mp-rec{background:var(--navy-d);padding:1.6rem 2rem;display:grid;grid-template-columns:48px 1fr auto;
+  gap:1.25rem;align-items:center;transition:background .2s;}
+.mp-rec:hover{background:rgba(255,255,255,.025);}
+.mp-rn{font-family:var(--serif);font-size:2.2rem;font-weight:300;color:rgba(184,135,42,.18);line-height:1;text-align:center;}
+.mp-rt{font-size:.9rem;font-weight:500;color:var(--cream);margin-bottom:.28rem;}
+.mp-rd{font-size:.8rem;font-weight:300;color:rgba(249,245,239,.42);line-height:1.6;}
+.mp-tag{font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+  padding:.28rem .65rem;border:1px solid rgba(184,135,42,.22);color:var(--gold-l);white-space:nowrap;flex-shrink:0;}
+.cta-row{display:flex;gap:.9rem;flex-wrap:wrap;}
+.btn-wa{display:inline-flex;align-items:center;gap:.7rem;background:#25D366;color:#fff;
+  border:none;font-family:var(--sans);font-size:.83rem;font-weight:600;letter-spacing:.06em;
+  padding:.95rem 1.75rem;cursor:pointer;text-decoration:none;transition:background .2s;}
+.btn-wa:hover{background:#1fba58;}
+.btn-ex{display:inline-flex;align-items:center;gap:.5rem;background:none;color:var(--cream);
+  border:1px solid rgba(184,135,42,.3);font-family:var(--sans);font-size:.83rem;font-weight:400;
+  letter-spacing:.08em;padding:.95rem 1.75rem;cursor:pointer;text-decoration:none;transition:all .2s;}
+.btn-ex:hover{border-color:rgba(184,135,42,.6);color:var(--gold-l);}
+
+/* Score interpretation strip */
+.score-strip{display:flex;gap:1px;background:rgba(184,135,42,.1);margin-bottom:2.5rem;}
+.ss-cell{flex:1;padding:1.1rem .75rem;background:rgba(255,255,255,.02);text-align:center;}
+.ss-val{font-family:var(--serif);font-size:1.1rem;font-weight:300;color:rgba(249,245,239,.45);line-height:1;margin-bottom:.2rem;}
+.ss-val.active{color:var(--gold-l);}
+.ss-lbl{font-size:.62rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:rgba(249,245,239,.25);}
+.ss-lbl.active{color:rgba(249,245,239,.55);}
+
+@media(max-width:700px){
+  .dim-grid{grid-template-columns:1fr;}
+  .an-grid{grid-template-columns:1fr;}
+  .mp-rec{grid-template-columns:36px 1fr;}.mp-tag{display:none;}
+  .in-dims{grid-template-columns:repeat(3,1fr);}
+  .q-nav{padding:0 1rem;}.q-body{padding:2rem 1rem 1rem;}
+  .q-foot{padding:1rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ SIGN IN ═══ -->
+<div id="s0" class="scr on">
+  <div class="si-wrap">
+    <img src="logo-new.png" class="si-logo" alt="Mélange Culture">
+    <div class="ai-badge">AssessAI · Corporate Readiness</div>
+    <h1 class="si-title">Know Where You <em>Really Stand.</em></h1>
+    <p class="si-sub">8 situational questions. 5 dimensions. Your honest professional profile — in under 10 minutes.</p>
+    <div class="si-card">
+      <label class="fl" for="f-name">Full Name</label>
+      <input class="fi" type="text" id="f-name" placeholder="Your full name" autocomplete="name">
+      <span class="fe" id="e-name">Please enter your name</span>
+      <label class="fl" for="f-email">Email Address</label>
+      <input class="fi" type="email" id="f-email" placeholder="you@email.com" autocomplete="email">
+      <span class="fe" id="e-email">Please enter a valid email</span>
+      <label class="fl" for="f-phone">WhatsApp Number</label>
+      <div class="ph-row">
+        <div class="ph-pre">+91</div>
+        <input class="fi" type="tel" id="f-phone" placeholder="10-digit mobile number" autocomplete="tel" style="margin-bottom:1.1rem;flex:1;">
+      </div>
+      <span class="fe" id="e-phone">Please enter a valid 10-digit number</span>
+      <button class="btn-p" onclick="doLogin()">Begin Assessment →</button>
+    </div>
+    <p class="si-terms">Your responses are confidential. Results sent to your WhatsApp at the end.</p>
+  </div>
+</div>
+
+<!-- ═══ INTRO ═══ -->
+<div id="s1" class="scr">
+  <div class="in-wrap">
+    <p class="in-greet" id="in-greet">Welcome, —</p>
+    <h2 class="in-head">Your <em>Corporate Readiness</em><br>Assessment</h2>
+    <p class="in-desc">AssessAI uses occupational psychology frameworks — Thomas PPA, Gallup Q12, and Mercer — to map your instinctive professional behaviour across five dimensions that predict corporate success.</p>
+    <div class="in-meta">
+      <div class="im"><div class="im-v">8</div><div class="im-l">Questions</div></div>
+      <div class="im"><div class="im-v">~10</div><div class="im-l">Minutes</div></div>
+      <div class="im"><div class="im-v">5</div><div class="im-l">Dimensions</div></div>
+      <div class="im"><div class="im-v">100</div><div class="im-l">Point Scale</div></div>
+    </div>
+    <div class="in-dims">
+      <div class="dc"><div class="dc-ico" style="background:rgba(184,135,42,.15);">⚡</div><div class="dc-n">Drive & Dominance</div><div class="dc-k">Assertiveness</div></div>
+      <div class="dc"><div class="dc-ico" style="background:rgba(120,0,20,.12);">💬</div><div class="dc-n">Influence & Comm.</div><div class="dc-k">Persuasion</div></div>
+      <div class="dc"><div class="dc-ico" style="background:rgba(45,106,79,.15);">🤝</div><div class="dc-n">Steadiness & Collab.</div><div class="dc-k">Team Orientation</div></div>
+      <div class="dc"><div class="dc-ico" style="background:rgba(11,28,58,.15);">🎯</div><div class="dc-n">Compliance & Detail</div><div class="dc-k">Standards</div></div>
+      <div class="dc"><div class="dc-ico" style="background:rgba(74,32,128,.15);">🔥</div><div class="dc-n">Resilience & Adapt.</div><div class="dc-k">Bounce-back</div></div>
+    </div>
+    <button class="btn-s" onclick="startQ()">Start Assessment →</button>
+  </div>
+</div>
+
+<!-- ═══ QUESTION ═══ -->
+<div id="s2" class="scr">
+  <div class="q-nav">
+    <img src="logo-new.png" class="q-logo" alt="Mélange">
+    <div class="q-pw">
+      <div class="q-pb"><div class="q-pf" id="qpf"></div></div>
+      <div class="q-pl" id="qpl">1 of 8</div>
+    </div>
+    <div style="width:60px"></div>
+  </div>
+  <div class="q-body">
+    <div class="q-tag" id="qtag">Drive & Dominance</div>
+    <div class="q-bignum" id="qnum">01</div>
+    <p class="q-sc" id="qsc"></p>
+    <div class="q-opts" id="qopts"></div>
+  </div>
+  <div class="q-foot">
+    <button class="btn-bk" id="btn-bk" onclick="prevQ()" style="visibility:hidden">← Back</button>
+    <button class="btn-nx" id="btn-nx" onclick="nextQ()">Next →</button>
+  </div>
+</div>
+
+<!-- ═══ RESULTS ═══ -->
+<div id="s3" class="scr">
+  <div class="r-hero">
+    <div class="r-hi">
+      <div class="r-greet" id="r-greet">Assessment Complete — Your Results</div>
+      <h2 class="r-title">Your <em>Corporate Readiness</em> Profile</h2>
+      <div class="gauge-wrap">
+        <svg class="gauge-svg" viewBox="0 0 180 180">
+          <circle class="g-bg" cx="90" cy="90" r="72"/>
+          <circle class="g-fill" id="g-fill" cx="90" cy="90" r="72" stroke-dasharray="0 452"/>
+          <text class="g-num" x="90" y="87" text-anchor="middle" id="g-num">0</text>
+          <text class="g-sub" x="90" y="108" text-anchor="middle">/100</text>
+        </svg>
+        <div class="r-badge" id="r-badge">—</div>
+      </div>
+      <div class="score-strip" id="score-strip">
+        <div class="ss-cell"><div class="ss-val" id="ss0">0–44</div><div class="ss-lbl">Emerging</div></div>
+        <div class="ss-cell"><div class="ss-val" id="ss1">45–64</div><div class="ss-lbl">Developing</div></div>
+        <div class="ss-cell"><div class="ss-val" id="ss2">65–79</div><div class="ss-lbl">Ready</div></div>
+        <div class="ss-cell"><div class="ss-val" id="ss3">80–100</div><div class="ss-lbl">High Potential</div></div>
+      </div>
+      <p id="r-interp" style="font-family:var(--serif);font-style:italic;font-size:1.1rem;font-weight:300;color:rgba(249,245,239,.58);line-height:1.65;max-width:560px;margin:0 auto;"></p>
+    </div>
+  </div>
+
+  <!-- Dimension breakdown -->
+  <div class="r-sec">
+    <div class="sec-ey"><div class="sec-dot" style="background:var(--gold)"></div><span class="sec-lbl">Your Five-Dimension Profile</span></div>
+    <h3 class="sec-h">Where You <em>Shine</em> & Where to Grow</h3>
+    <div class="dim-grid">
+      <div class="radar-wrap"><canvas id="rc" width="280" height="280"></canvas></div>
+      <div class="dim-bars" id="dim-bars"></div>
+    </div>
+  </div>
+
+  <!-- Strengths & gaps -->
+  <div class="r-sec">
+    <div class="sec-ey"><div class="sec-dot" style="background:var(--crimson)"></div><span class="sec-lbl">Behavioural Analysis</span></div>
+    <h3 class="sec-h">Your Strengths &amp; <em>Development Areas</em></h3>
+    <div class="an-grid">
+      <div class="an-card an-str">
+        <div class="an-lbl">Your Strengths</div>
+        <div id="strengths-list"></div>
+      </div>
+      <div class="an-card an-gap">
+        <div class="an-lbl">Areas to Develop</div>
+        <div id="gaps-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mélange pitch -->
+  <div class="mp">
+    <div class="mp-in">
+      <div class="mp-ey">How Mélange Can Help</div>
+      <h3 class="mp-h">Your Gap Is Exactly<br>What We Were <em>Built to Close.</em></h3>
+      <p class="mp-sub">Every dimension you scored below 65% is a trainable professional skill — not a personality flaw. Mélange programmes are built specifically around this gap.</p>
+      <div class="mp-recs" id="mp-recs"></div>
+      <div class="cta-row">
+        <a id="wa-btn" href="#" class="btn-wa" target="_blank">
+          <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Send Results to WhatsApp
+        </a>
+        <a href="finishing-school.html" class="btn-ex">Explore Mélange Programmes →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════
+// DATA
+// ══════════════════════════════════════════
+const QS = [
+  { num:1, tag:'Drive & Dominance', type:'Situational',
+    sc:'You have just joined a new organisation. During your first team meeting, a senior colleague dismisses your suggestion in front of everyone, saying it will never work. The rest of the team goes silent. What do you do?',
+    opts:[
+      {t:'Immediately push back and defend your idea with data, making it clear you believe it has merit.',s:{D:4,I:2,S:1,C:2,R:2}},
+      {t:'Stay quiet in the meeting but follow up with the senior colleague one-on-one to discuss the idea further.',s:{D:2,I:3,S:3,C:2,R:3}},
+      {t:'Accept the feedback gracefully and move on, focusing on learning from the senior colleague.',s:{D:1,I:2,S:4,C:2,R:2}},
+      {t:'Ask the senior colleague what specific concerns they have, inviting a constructive dialogue in the meeting.',s:{D:3,I:4,S:2,C:3,R:3}},
+    ]},
+  { num:2, tag:'Influence & Communication', type:'Behavioural',
+    sc:'You need to get cross-functional buy-in for a new initiative. The stakeholders have competing priorities and limited time. How do you approach this?',
+    opts:[
+      {t:'Send a detailed email to all stakeholders at once explaining the initiative and requesting their sign-off.',s:{D:2,I:1,S:2,C:3,R:2}},
+      {t:'Identify the most influential stakeholder first, build their support, and use them as an advocate with others.',s:{D:3,I:4,S:2,C:2,R:3}},
+      {t:'Schedule individual conversations with each stakeholder to understand their concerns before proposing anything.',s:{D:2,I:4,S:3,C:3,R:3}},
+      {t:'Present the initiative at the next all-hands meeting with slides and data to make a compelling public case.',s:{D:3,I:3,S:1,C:3,R:2}},
+    ]},
+  { num:3, tag:'Steadiness & Collaboration', type:'Situational',
+    sc:'Two of your teammates are in open conflict and it is affecting the team\'s morale and output. Your manager is travelling and unavailable. What is your first instinct?',
+    opts:[
+      {t:'Stay out of it — it is not your conflict and your manager will handle it when they return.',s:{D:1,I:1,S:2,C:2,R:2}},
+      {t:'Speak to each person separately, listen to both sides, and try to find common ground to reduce tension.',s:{D:2,I:3,S:4,C:2,R:3}},
+      {t:'Call a brief team huddle and openly acknowledge the tension, encouraging the team to focus on shared goals.',s:{D:3,I:4,S:3,C:2,R:3}},
+      {t:'Document the situation and send your manager a summary so they can address it when they return.',s:{D:2,I:1,S:2,C:4,R:2}},
+    ]},
+  { num:4, tag:'Compliance & Detail Orientation', type:'Behavioural',
+    sc:'You have been asked to prepare a report for a client presentation. You notice a minor data inconsistency that would take 45 minutes to verify — and you have 1 hour left. What do you do?',
+    opts:[
+      {t:'Submit it as-is — the inconsistency is minor and the overall message is accurate.',s:{D:3,I:2,S:2,C:1,R:2}},
+      {t:'Spend the 45 minutes verifying the data, even if it means submitting right at the deadline.',s:{D:2,I:1,S:2,C:4,R:3}},
+      {t:'Flag the inconsistency to your manager immediately, explain the time constraint, and let them decide.',s:{D:2,I:2,S:3,C:3,R:3}},
+      {t:'Add a brief caveat to the slide noting that data is being verified, and present with full transparency.',s:{D:3,I:3,S:2,C:3,R:4}},
+    ]},
+  { num:5, tag:'Resilience & Adaptability', type:'Behavioural',
+    sc:'You worked very hard on a project proposal that you believed in strongly. It was rejected by leadership, with limited feedback provided. How do you respond?',
+    opts:[
+      {t:'Feel deflated for a few days but eventually move on to the next task without revisiting the proposal.',s:{D:2,I:1,S:3,C:1,R:2}},
+      {t:'Immediately request a debrief with leadership to understand the specific reasons for rejection.',s:{D:3,I:3,S:2,C:3,R:4}},
+      {t:'Analyse the proposal on your own, identify what you would change, and plan how to resubmit in a stronger form.',s:{D:3,I:2,S:2,C:4,R:4}},
+      {t:'Wonder whether you are suited for this type of work and consider whether to continue in this role.',s:{D:1,I:1,S:2,C:1,R:1}},
+    ]},
+  { num:6, tag:'Drive & Compliance', type:'Situational',
+    sc:'It is Thursday afternoon. You have three urgent tasks due Friday morning: a client deliverable, an internal report for your VP, and an onboarding session you committed to lead for a new joiner. How do you handle the competing priorities?',
+    opts:[
+      {t:'Power through all three tasks, working late into the night if needed, to deliver everything on time.',s:{D:4,I:1,S:2,C:3,R:3}},
+      {t:'Immediately communicate with all three parties, explain the situation, and negotiate new timelines or support.',s:{D:3,I:4,S:3,C:3,R:4}},
+      {t:'Prioritise the client deliverable first, then assess what is achievable for the other two.',s:{D:3,I:2,S:2,C:4,R:3}},
+      {t:'Ask your manager to help you decide what to deprioritise and get their backing before proceeding.',s:{D:2,I:2,S:3,C:3,R:2}},
+    ]},
+  { num:7, tag:'Influence & Steadiness', type:'Behavioural',
+    sc:'Your manager gives you critical feedback that you feel is unfair and not fully based on facts. It has been captured in your mid-year performance review. What is your response?',
+    opts:[
+      {t:'Accept the feedback without question — your manager has more experience and may be seeing something you are not.',s:{D:1,I:2,S:4,C:2,R:2}},
+      {t:'Request a formal meeting to discuss the feedback, bring specific examples that counter it, and ask for the evidence behind it.',s:{D:4,I:3,S:2,C:4,R:3}},
+      {t:'Share your concerns with a trusted colleague first to check if your perception of the feedback is valid.',s:{D:2,I:3,S:3,C:2,R:3}},
+      {t:'Feel frustrated but decide to prove your manager wrong through your future performance rather than confronting it.',s:{D:3,I:1,S:3,C:2,R:3}},
+    ]},
+  { num:8, tag:'Resilience & Drive', type:'Situational',
+    sc:'You have been assigned to a project in an area you have no prior experience in. The brief is vague, the team is new to you, and there is no dedicated supervisor assigned. What is your approach?',
+    opts:[
+      {t:'Wait for clearer instructions before starting — proceeding without direction could lead to wasted effort.',s:{D:1,I:1,S:2,C:3,R:1}},
+      {t:'Spend time researching the subject area independently and map out what you know, what you need to learn, and what questions to ask.',s:{D:3,I:2,S:2,C:4,R:4}},
+      {t:'Immediately connect with team members and key stakeholders to understand their expectations and build context fast.',s:{D:3,I:4,S:3,C:2,R:4}},
+      {t:'Set yourself a two-day self-imposed deadline to produce a project outline, accept it may be imperfect, and share it for early feedback.',s:{D:4,I:3,S:2,C:3,R:4}},
+    ]},
+];
+
+const DIMS = {
+  D:{name:'Drive & Dominance',  short:'Drive',      color:'#b8872a'},
+  I:{name:'Influence & Comm.',  short:'Influence',  color:'#780014'},
+  S:{name:'Steadiness & Collab.',short:'Steadiness',color:'#2a6b6b'},
+  C:{name:'Compliance & Detail',short:'Compliance', color:'#3a4a6b'},
+  R:{name:'Resilience & Adapt.',short:'Resilience', color:'#4a2080'},
+};
+
+const DIM_INFO = {
+  D:{
+    hi:'You approach challenges with confidence and a willingness to assert your position — a foundational leadership trait.',
+    lo:'Developing assertiveness is key. Many strong professionals underestimate their instinct to lead; it just needs activation.',
+    rec:'Launch Pad → Self-Leadership Module',
+    why:'7 in 10 professionals who lack early confidence stay in execution roles long after they should have moved to leadership.',
+    prog:'Launch Pad'
+  },
+  I:{
+    hi:'You instinctively think about stakeholders, read the room, and communicate with strategic intent.',
+    lo:'Influence is the #1 skill gap among fresh graduates — it\'s not what you know, it\'s how you communicate what you know.',
+    rec:'Launch Pad → Storytelling & Executive Presence',
+    why:'Communication style determines how quickly your ideas get adopted — regardless of how good they are.',
+    prog:'Launch Pad'
+  },
+  S:{
+    hi:'You value team harmony and have the emotional intelligence to navigate conflict with maturity.',
+    lo:'Collaboration is a career accelerator. Teams trust people who listen first — and that skill is built, not inherited.',
+    rec:'Launch Pad → Peer Learning Circles',
+    why:'68% of workplace failures trace to poor collaboration, not technical incompetence.',
+    prog:'Launch Pad'
+  },
+  C:{
+    hi:'You hold yourself to high professional standards — the kind that builds client trust and long-term reputation.',
+    lo:'Detail orientation and professional standards define your reputation in the first 12 months of any role.',
+    rec:'Campus Blueprint → Professional Identity Formation',
+    why:'One error in a client deliverable costs more to repair than the entire effort of getting it right.',
+    prog:'Campus Blueprint'
+  },
+  R:{
+    hi:'You bounce back from setbacks with curiosity rather than defeat — the defining trait of long-term corporate success.',
+    lo:'Resilience is the strongest predictor of career longevity — more than GPA, intelligence, or technical skill.',
+    rec:'Launch Pad → 90-Day Career Blueprint',
+    why:'The ability to fail forward separates people who grow in their careers from those who plateau.',
+    prog:'Launch Pad'
+  },
+};
+
+// ══════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════
+const ST = { name:'', email:'', phone:'', answers:[], cur:0, sel:null };
+
+// ══════════════════════════════════════════
+// NAVIGATION
+// ══════════════════════════════════════════
+function show(id) {
+  document.querySelectorAll('.scr').forEach(s => s.classList.remove('on'));
+  const el = document.getElementById(id);
+  el.classList.remove('on');
+  void el.offsetWidth;
+  el.classList.add('on');
+  window.scrollTo(0,0);
+}
+
+// ══════════════════════════════════════════
+// SIGN IN
+// ══════════════════════════════════════════
+function doLogin() {
+  const name  = document.getElementById('f-name').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const phone = document.getElementById('f-phone').value.trim().replace(/\D/g,'');
+  let ok = true;
+  const showErr = (id, vis) => { document.getElementById(id).style.display = vis ? 'block' : 'none'; };
+  showErr('e-name',  !name  || name.length < 2);  if (!name || name.length < 2)  ok = false;
+  showErr('e-email', !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)); if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) ok = false;
+  showErr('e-phone', phone.length !== 10); if (phone.length !== 10) ok = false;
+  if (!ok) return;
+  ST.name = name; ST.email = email; ST.phone = phone;
+  document.getElementById('in-greet').textContent = `Welcome, ${name.split(' ')[0]} —`;
+  show('s1');
+}
+
+// ══════════════════════════════════════════
+// QUESTIONS
+// ══════════════════════════════════════════
+function startQ() { ST.cur = 0; ST.answers = []; ST.sel = null; renderQ(); show('s2'); }
+
+function renderQ() {
+  const q = QS[ST.cur];
+  const pct = (ST.cur / QS.length) * 100;
+  document.getElementById('qpf').style.width = pct + '%';
+  document.getElementById('qpl').textContent = `${ST.cur + 1} of ${QS.length}`;
+  document.getElementById('qtag').textContent = q.tag;
+  document.getElementById('qnum').textContent = `0${q.num}`;
+  document.getElementById('qsc').textContent = q.sc;
+
+  const prev = ST.answers[ST.cur];
+  ST.sel = prev !== undefined ? prev : null;
+
+  const cont = document.getElementById('qopts');
+  cont.innerHTML = '';
+  q.opts.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'q-opt' + (prev === i ? ' sel' : '');
+    btn.innerHTML = `<span class="ol">${'ABCD'[i]}</span><span>${opt.t}</span>`;
+    btn.onclick = () => pick(i);
+    cont.appendChild(btn);
+  });
+
+  const nx = document.getElementById('btn-nx');
+  nx.classList.toggle('on', ST.sel !== null);
+  nx.textContent = ST.cur === QS.length - 1 ? 'See My Results →' : 'Next →';
+  document.getElementById('btn-bk').style.visibility = ST.cur === 0 ? 'hidden' : 'visible';
+}
+
+function pick(i) {
+  ST.sel = i;
+  ST.answers[ST.cur] = i;
+  document.querySelectorAll('.q-opt').forEach((el, idx) => el.classList.toggle('sel', idx === i));
+  const nx = document.getElementById('btn-nx');
+  nx.classList.add('on');
+  nx.textContent = ST.cur === QS.length - 1 ? 'See My Results →' : 'Next →';
+}
+
+function nextQ() {
+  if (ST.sel === null) return;
+  if (ST.cur === QS.length - 1) { calcResults(); return; }
+  ST.cur++;
+  renderQ();
+}
+
+function prevQ() {
+  if (ST.cur === 0) return;
+  ST.cur--;
+  renderQ();
+}
+
+// ══════════════════════════════════════════
+// SCORING
+// ══════════════════════════════════════════
+function calcResults() {
+  const tots = {D:0,I:0,S:0,C:0,R:0};
+  ST.answers.forEach((oi, qi) => {
+    if (oi !== undefined) {
+      const s = QS[qi].opts[oi].s;
+      Object.keys(tots).forEach(k => tots[k] += s[k]);
+    }
+  });
+  const max = 4 * QS.length; // 32
+  const pcts = {};
+  Object.keys(tots).forEach(k => pcts[k] = Math.round((tots[k] / max) * 100));
+  const overall = Math.round(Object.values(pcts).reduce((a,b)=>a+b,0) / 5);
+  renderResults(pcts, overall);
+  show('s3');
+  setTimeout(() => animateResults(pcts, overall), 300);
+}
+
+function getRating(s) {
+  if (s >= 80) return {label:'High Potential', cls:'rb-hp'};
+  if (s >= 65) return {label:'Ready',          cls:'rb-rd'};
+  if (s >= 45) return {label:'Developing',     cls:'rb-dv'};
+  return {label:'Emerging', cls:'rb-em'};
+}
+
+function getInterp(s, name) {
+  const first = name.split(' ')[0];
+  if (s >= 80) return `${first}, your instincts are already well-calibrated for the corporate world. Mélange will sharpen your edge and accelerate your trajectory.`;
+  if (s >= 65) return `${first}, you have solid foundations across most dimensions. Targeted development in your gap areas will move you from Ready to High Potential.`;
+  if (s >= 45) return `${first}, you're showing real promise in several areas. The gaps you have are exactly what the right programme closes in 30–90 days.`;
+  return `${first}, your score reveals significant development opportunity. This is not a limitation — it is a starting point. The right intervention now compounds over an entire career.`;
+}
+
+// ══════════════════════════════════════════
+// RENDER RESULTS
+// ══════════════════════════════════════════
+function renderResults(pcts, overall) {
+  const rating = getRating(overall);
+  document.getElementById('r-greet').textContent = `${ST.name} · Assessment Complete`;
+  document.getElementById('r-interp').textContent = getInterp(overall, ST.name);
+
+  // Badge
+  const badge = document.getElementById('r-badge');
+  badge.textContent = rating.label;
+  badge.className = 'r-badge ' + rating.cls;
+
+  // Score strip highlight
+  const stripIdx = overall >= 80 ? 3 : overall >= 65 ? 2 : overall >= 45 ? 1 : 0;
+  ['ss0','ss1','ss2','ss3'].forEach((id,i) => {
+    document.getElementById(id).classList.toggle('active', i === stripIdx);
+    document.getElementById(id).nextElementSibling.classList.toggle('active', i === stripIdx);
+  });
+
+  // Dim bars
+  const barsEl = document.getElementById('dim-bars');
+  barsEl.innerHTML = '';
+  Object.keys(DIMS).forEach(k => {
+    const d = DIMS[k]; const p = pcts[k];
+    barsEl.innerHTML += `
+      <div class="dbr">
+        <div class="dbh">
+          <span class="dbn"><span class="dbd" style="background:${d.color}"></span>${d.name}</span>
+          <span class="dbp">${p}%</span>
+        </div>
+        <div class="dbt"><div class="dbf" id="bar-${k}" style="background:${d.color}"></div></div>
+        <div class="dbs">${p >= 65 ? DIM_INFO[k].hi : DIM_INFO[k].lo}</div>
+      </div>`;
+  });
+
+  // Strengths & gaps
+  const sorted = Object.keys(pcts).sort((a,b) => pcts[b] - pcts[a]);
+  const top2 = sorted.slice(0,2);
+  const bot2 = sorted.slice(-2).reverse();
+
+  const sList = document.getElementById('strengths-list');
+  sList.innerHTML = top2.map(k => `<div class="an-item"><div class="an-n">${DIMS[k].name} — ${pcts[k]}%</div><div class="an-d">${DIM_INFO[k].hi}</div></div>`).join('');
+
+  const gList = document.getElementById('gaps-list');
+  gList.innerHTML = bot2.map(k => `<div class="an-item"><div class="an-n">${DIMS[k].name} — ${pcts[k]}%</div><div class="an-d">${DIM_INFO[k].lo}</div></div>`).join('');
+
+  // Mélange recommendations
+  const gapDims = sorted.filter(k => pcts[k] < 65);
+  const recDims = gapDims.length > 0 ? gapDims.slice(0,3) : sorted.slice(-3);
+  const recsEl = document.getElementById('mp-recs');
+  recsEl.innerHTML = recDims.map((k,i) => `
+    <div class="mp-rec">
+      <div class="mp-rn">0${i+1}</div>
+      <div>
+        <div class="mp-rt">${DIM_INFO[k].rec}</div>
+        <div class="mp-rd">${DIM_INFO[k].why}</div>
+      </div>
+      <div class="mp-tag">${DIM_INFO[k].prog}</div>
+    </div>`).join('');
+
+  // WhatsApp link
+  const msg = encodeURIComponent(
+    `Hi Mélange Team! 👋\n\nI just completed the AssessAI Corporate Readiness Assessment.\n\n` +
+    `📋 My Results:\nName: ${ST.name}\nEmail: ${ST.email}\nScore: ${overall}/100 — ${rating.label}\n\n` +
+    `📊 Dimension Profile:\n` +
+    Object.keys(DIMS).map(k => `• ${DIMS[k].name}: ${pcts[k]}%`).join('\n') +
+    `\n\nI'd love to understand how Mélange can help me. Please reach out!\n+91${ST.phone}`
+  );
+  document.getElementById('wa-btn').href = `https://wa.me/917732000027?text=${msg}`;
+}
+
+function animateResults(pcts, overall) {
+  // Gauge
+  const circ = 2 * Math.PI * 72; // 452.39
+  const fill = (overall / 100) * circ;
+  document.getElementById('g-fill').setAttribute('stroke-dasharray', `${fill} ${circ}`);
+  // Animate number
+  let n = 0;
+  const step = () => {
+    n = Math.min(n + 2, overall);
+    document.getElementById('g-num').textContent = n;
+    if (n < overall) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+  // Bars
+  setTimeout(() => {
+    Object.keys(DIMS).forEach(k => {
+      const el = document.getElementById('bar-' + k);
+      if (el) el.style.width = pcts[k] + '%';
+    });
+  }, 200);
+  // Radar
+  setTimeout(() => drawRadar(pcts), 400);
+}
+
+// ══════════════════════════════════════════
+// RADAR CHART
+// ══════════════════════════════════════════
+function drawRadar(pcts) {
+  const canvas = document.getElementById('rc');
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const cx = W/2, cy = H/2;
+  const maxR = Math.min(W,H) * 0.36;
+  const n = 5;
+  const dimOrder = ['D','I','R','C','S'];
+  const labels = {D:'Drive',I:'Influence',R:'Resilience',C:'Compliance',S:'Steadiness'};
+
+  ctx.clearRect(0,0,W,H);
+
+  // Grid rings
+  [.25,.5,.75,1].forEach(t => {
+    ctx.beginPath();
+    dimOrder.forEach((k,i) => {
+      const a = (i*2*Math.PI/n) - Math.PI/2;
+      const x = cx + maxR*t*Math.cos(a), y = cy + maxR*t*Math.sin(a);
+      i===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    });
+    ctx.closePath();
+    ctx.strokeStyle = t===1 ? 'rgba(11,28,58,.15)' : 'rgba(11,28,58,.07)';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    if (t===.5){ ctx.fillStyle='rgba(11,28,58,.03)'; ctx.fill(); }
+  });
+
+  // Axes
+  dimOrder.forEach((_,i) => {
+    const a=(i*2*Math.PI/n)-Math.PI/2;
+    ctx.beginPath();
+    ctx.moveTo(cx,cy);
+    ctx.lineTo(cx+maxR*Math.cos(a), cy+maxR*Math.sin(a));
+    ctx.strokeStyle='rgba(11,28,58,.1)';
+    ctx.lineWidth=1;
+    ctx.stroke();
+  });
+
+  // Data polygon
+  ctx.beginPath();
+  dimOrder.forEach((k,i) => {
+    const a=(i*2*Math.PI/n)-Math.PI/2;
+    const r=maxR*(pcts[k]/100);
+    const x=cx+r*Math.cos(a), y=cy+r*Math.sin(a);
+    i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+  });
+  ctx.closePath();
+  ctx.fillStyle='rgba(184,135,42,.18)';
+  ctx.fill();
+  ctx.strokeStyle='rgba(184,135,42,.75)';
+  ctx.lineWidth=2;
+  ctx.stroke();
+
+  // Dots
+  dimOrder.forEach((k,i) => {
+    const a=(i*2*Math.PI/n)-Math.PI/2;
+    const r=maxR*(pcts[k]/100);
+    ctx.beginPath();
+    ctx.arc(cx+r*Math.cos(a), cy+r*Math.sin(a), 4,0,Math.PI*2);
+    ctx.fillStyle='#b8872a';
+    ctx.fill();
+  });
+
+  // Labels
+  const lr=maxR+30;
+  ctx.font='500 10.5px DM Sans,sans-serif';
+  ctx.textAlign='center';
+  ctx.textBaseline='middle';
+  dimOrder.forEach((k,i) => {
+    const a=(i*2*Math.PI/n)-Math.PI/2;
+    ctx.fillStyle=DIMS[k].color;
+    ctx.fillText(labels[k], cx+lr*Math.cos(a), cy+lr*Math.sin(a));
+  });
+
+  // Score labels on rings
+  ctx.font='300 9px DM Sans,sans-serif';
+  ctx.fillStyle='rgba(11,28,58,.3)';
+  ctx.textAlign='center';
+  [25,50,75,100].forEach(v => {
+    const y=cy-maxR*(v/100)-6;
+    ctx.fillText(v+'%', cx+4, y);
+  });
+}
+
+// ══════════════════════════════════════════
+// KEYBOARD ENTER
+// ══════════════════════════════════════════
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    if (document.getElementById('s0').classList.contains('on')) doLogin();
+    else if (document.getElementById('s1').classList.contains('on')) startQ();
+    else if (document.getElementById('s2').classList.contains('on') && ST.sel !== null) nextQ();
+  }
+  if (e.key >= '1' && e.key <= '4' && document.getElementById('s2').classList.contains('on')) {
+    pick(parseInt(e.key)-1);
+  }
+});
+</script>
+</body>
+</html>

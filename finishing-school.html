@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#071327">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" type="image/png" href="logo-new.png">
+<link rel="apple-touch-icon" href="logo-new.png">
+<title>Finishing School — Campus-to-Corporate Transformation | Mélange Culture</title>
+<meta name="description" content="Mélange Culture's Finishing School bridges the campus-to-corporate gap. Programmes include Campus Blueprint, Launch Pad and The Corporate Edge for India's graduates.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://melangeculture.com/finishing-school.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://melangeculture.com/finishing-school.html">
+<meta property="og:title" content="Finishing School — Campus-to-Corporate Transformation | Mélange Culture">
+<meta property="og:description" content="Bridging the campus-to-corporate gap through identity-first transformation programmes for India's graduates.">
+<meta property="og:image" content="https://melangeculture.com/logo-new.png">
+<meta property="og:site_name" content="Mélange Culture">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Finishing School | Mélange Culture">
+<meta name="twitter:description" content="Campus-to-corporate transformation programmes for India's graduates.">
+<meta name="twitter:image" content="https://melangeculture.com/logo-new.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Mélange Culture — Finishing School","url":"https://melangeculture.com/finishing-school.html","description":"Campus-to-corporate transformation programmes for India's graduates.","parentOrganization":{"@type":"Organization","name":"Mélange Culture","url":"https://melangeculture.com"}}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0B1C3A;--navy-deep:#071327;--crimson:#780014;--gold:#b8872a;--gold-light:#d4a843;--cream:#f9f5ef;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+  body{font-family:var(--sans);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+  a,button{-webkit-tap-highlight-color:transparent;}
+  input,select,textarea{font-size:16px;border-radius:0;-webkit-appearance:none;appearance:none;}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
+  .reveal.visible{opacity:1;transform:translateY(0);}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,19,39,.97);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(184,135,42,.15);}
+  .nav-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;height:72px;display:flex;align-items:center;justify-content:space-between;}
+  .nav-logo img{height:42px;width:auto;display:block;}
+  .nav-links{display:flex;align-items:center;gap:.25rem;list-style:none;}
+  .nav-pill{padding:.45rem 1.1rem;font-size:.8rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:rgba(249,245,239,.6);border:1px solid transparent;transition:all .2s;}
+  .nav-pill:hover,.nav-pill.active{color:var(--gold-light);border-color:rgba(184,135,42,.3);background:rgba(184,135,42,.06);}
+  .nav-back{font-size:.78rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:rgba(249,245,239,.5);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:.5rem;}
+  .nav-back:hover{color:var(--gold-light);}
+  .nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;padding:6px;cursor:pointer;background:none;border:none;-webkit-tap-highlight-color:transparent;}
+  .nav-hamburger span{display:block;height:1.5px;background:rgba(249,245,239,.75);transition:transform .3s cubic-bezier(.16,1,.3,1),opacity .2s;}
+  .nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+  .nav-hamburger.open span:nth-child(2){opacity:0;}
+  .nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+  .mobile-menu{display:none;position:fixed;inset:0;z-index:99;background:rgba(7,19,39,.98);flex-direction:column;justify-content:center;align-items:center;gap:2rem;padding:2rem;padding-top:max(2rem,env(safe-area-inset-top));padding-bottom:max(2rem,env(safe-area-inset-bottom));}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{font-family:var(--serif);font-size:clamp(1.6rem,6vw,2.5rem);font-weight:300;color:rgba(249,245,239,.75);text-decoration:none;transition:color .2s;}
+  .mobile-menu a:hover{color:var(--gold-light);}
+  .mob-cta{background:var(--crimson)!important;color:#fff!important;font-family:var(--sans)!important;font-size:.85rem!important;font-weight:500!important;letter-spacing:.1em!important;text-transform:uppercase!important;padding:.85rem 2rem!important;}
+  @media(max-width:640px){.nav-links{display:none;}.nav-back{display:none;}.nav-hamburger{display:flex;}.nav-inner{padding:0 1.25rem;}}
+
+  /* HERO */
+  .hero{position:relative;min-height:72vh;display:flex;align-items:flex-end;background:var(--navy-deep);overflow:hidden;}
+  .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 70% 30%,rgba(120,0,20,.16) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 15% 80%,rgba(184,135,42,.1) 0%,transparent 50%);}
+  .hero-grain{position:absolute;inset:0;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  .hero-content{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:9rem 2.5rem 5rem;width:100%;}
+  .pillar-badge{display:inline-flex;align-items:center;gap:.6rem;padding:.35rem 1rem .35rem .5rem;border:1px solid rgba(184,135,42,.3);font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);margin-bottom:2rem;}
+  .badge-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);}
+  h1.pillar-heading{font-family:var(--serif);font-weight:300;font-size:clamp(3rem,6vw,6.5rem);letter-spacing:-.03em;line-height:1.04;color:var(--cream);margin-bottom:1.5rem;}
+  h1.pillar-heading em{font-style:italic;color:var(--gold-light);}
+  .pillar-tagline{font-family:var(--serif);font-style:italic;font-size:1.15rem;font-weight:400;color:rgba(249,245,239,.58);padding-left:1.25rem;border-left:2px solid var(--gold);margin-bottom:3rem;max-width:560px;line-height:1.6;}
+  .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(184,135,42,.1);border:1px solid rgba(184,135,42,.1);}
+  .hs{padding:1.5rem;background:rgba(7,19,39,.7);}
+  .hs-num{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--gold-light);letter-spacing:-.02em;line-height:1;margin-bottom:.3rem;}
+  .hs-label{font-size:.7rem;font-weight:400;letter-spacing:.07em;text-transform:uppercase;color:rgba(249,245,239,.42);line-height:1.4;}
+
+  /* CONTENT */
+  .sec{padding:6rem 0;}
+  .sec-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;}
+  .eyebrow{display:inline-flex;align-items:center;gap:.75rem;margin-bottom:1rem;}
+  .eyebrow-dot{width:6px;height:6px;border-radius:50%;}
+  .eyebrow-txt{font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;}
+  h2.sh{font-family:var(--serif);font-weight:300;font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.025em;line-height:1.1;color:var(--navy);margin-bottom:1.25rem;}
+  h2.sh em{font-style:italic;color:var(--crimson);}
+  .sub{font-size:.93rem;font-weight:300;line-height:1.82;color:#4a4038;max-width:640px;margin-bottom:3rem;}
+
+  /* GRID */
+  .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,.07);}
+  .g2{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(0,0,0,.07);}
+  .g4{display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:start;}
+
+  /* CARDS */
+  .card{background:#fff;padding:2.25rem 2rem;transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.1);z-index:2;position:relative;}
+  .card-lbl{font-size:.67rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.75rem;}
+  .card-ttl{font-family:var(--serif);font-size:1.5rem;font-weight:500;line-height:1.25;color:var(--navy);margin-bottom:.6rem;}
+  .card-for{font-size:.72rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#8a7a6e;margin-bottom:1.25rem;}
+  .card-body{font-size:.87rem;font-weight:300;line-height:1.75;color:#4a4038;margin-bottom:1.25rem;}
+  .card-list{list-style:none;}
+  .card-list li{font-size:.82rem;font-weight:300;line-height:1.6;color:#4a4038;padding:.32rem 0;border-bottom:1px solid rgba(0,0,0,.05);display:flex;align-items:flex-start;gap:.5rem;}
+  .card-list li::before{content:'→';font-size:.68rem;margin-top:.15rem;flex-shrink:0;opacity:.45;}
+  .layer-card{background:#fff;padding:2.5rem 2rem;border-top:3px solid;}
+  .lc-n{font-size:.72rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;opacity:.4;margin-bottom:.5rem;}
+  .lc-t{font-family:var(--serif);font-size:1.75rem;font-weight:400;color:var(--navy);margin-bottom:.4rem;}
+  .lc-sub{font-size:.75rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#8a7a6e;margin-bottom:1.25rem;}
+  .lc-body{font-size:.9rem;font-weight:300;line-height:1.8;color:#4a4038;}
+
+  /* PRODUCT LAYOUT */
+  .prod-sec{padding:5rem 0;border-top:1px solid rgba(0,0,0,.06);}
+  .prod-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;}
+  .prod-num{font-family:var(--serif);font-size:5rem;font-weight:300;letter-spacing:-.06em;line-height:1;opacity:.15;margin-bottom:.75rem;}
+  .prod-lbl{font-size:.7rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.6rem;}
+  .prod-ttl{font-family:var(--serif);font-size:2rem;font-weight:400;color:var(--navy);line-height:1.2;margin-bottom:.75rem;}
+  .prod-model{font-size:.75rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:#8a7a6e;margin-bottom:1.5rem;}
+  .prod-quote{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:#4a4038;line-height:1.6;padding-left:1rem;border-left:2px solid var(--gold);margin-bottom:1.5rem;}
+  .prod-body{font-size:.88rem;font-weight:300;line-height:1.8;color:#4a4038;}
+  .sidebar-tag{margin-top:1.5rem;padding:.75rem 1rem;border:1px solid rgba(184,135,42,.2);display:inline-flex;align-items:center;gap:.5rem;}
+  .sidebar-tag-lbl{font-size:.7rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:#6a5f58;}
+  .sidebar-tag-val{font-size:.82rem;font-weight:400;color:var(--navy);}
+  .det-row{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(0,0,0,.06);margin-bottom:1px;}
+  .det-cell{background:#fff;padding:1.5rem 1.75rem;}
+  .det-lbl{font-size:.67rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;}
+  .det-list{list-style:none;display:flex;flex-direction:column;gap:.4rem;}
+  .det-list li{font-size:.83rem;font-weight:300;color:#4a4038;line-height:1.55;display:flex;align-items:flex-start;gap:.5rem;}
+  .det-list li::before{content:'·';color:var(--gold);flex-shrink:0;font-size:1.2rem;line-height:1;}
+
+  /* DARK */
+  .dark{background:var(--navy);padding:6rem 0;}
+  .dark-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;}
+  .bc{background:var(--navy);padding:2rem;transition:background .2s;}
+  .bc:hover{background:rgba(255,255,255,.05);}
+  .bc-n{font-family:var(--serif);font-size:2rem;font-weight:300;color:rgba(184,135,42,.22);margin-bottom:.85rem;}
+  .bc-t{font-family:var(--serif);font-size:1.15rem;font-weight:500;color:var(--cream);margin-bottom:.6rem;}
+  .bc-b{font-size:.86rem;font-weight:300;line-height:1.75;color:rgba(249,245,239,.46);}
+
+  /* PILLAR NAV */
+  .pnav{background:var(--navy-deep);border-top:1px solid rgba(184,135,42,.1);padding:3rem 0;}
+  .pnav-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+  .pnav-card{padding:2rem;border:1px solid rgba(184,135,42,.1);text-decoration:none;transition:border-color .2s,background .2s;display:block;}
+  .pnav-card:hover{border-color:rgba(184,135,42,.3);background:rgba(255,255,255,.03);}
+  .pnav-dir{font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(249,245,239,.3);margin-bottom:.5rem;}
+  .pnav-name{font-family:var(--serif);font-size:1.4rem;font-weight:400;color:var(--cream);}
+  .pnav-desc{font-size:.83rem;font-weight:300;color:rgba(249,245,239,.4);margin-top:.5rem;line-height:1.6;}
+
+  /* FOOTER */
+  .footer{background:var(--navy-deep);padding:2.5rem;border-top:1px solid rgba(184,135,42,.08);}
+  .footer-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+  .footer-brand{font-family:var(--serif);font-size:1.2rem;font-weight:300;color:var(--cream);}
+  .flinks{display:flex;gap:1.5rem;list-style:none;}
+  .flinks a{font-size:.78rem;font-weight:300;color:rgba(249,245,239,.35);text-decoration:none;transition:color .2s;}
+  .flinks a:hover{color:var(--gold-light);}
+  .footer-copy{font-size:.75rem;font-weight:300;color:rgba(249,245,239,.25);}
+
+  @media(max-width:1024px){.hero-stats{grid-template-columns:repeat(2,1fr);}.g3{grid-template-columns:1fr 1fr;}.g4{grid-template-columns:1fr;}.det-row{grid-template-columns:1fr;}.pnav-inner{grid-template-columns:1fr;}.footer-inner{flex-direction:column;text-align:center;}}
+  @media(max-width:640px){.nav-links{display:none;}.g3,.g2{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="logo-new.png" alt="Mélange Culture" height="42" width="auto"></a>
+    <ul class="nav-links">
+      <li><a href="finishing-school.html" class="nav-pill active">Finishing School</a></li>
+      <li><a href="employee-engagement.html" class="nav-pill">Employee Engagement</a></li>
+    </ul>
+    <a href="index.html" class="nav-back">← Home</a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+  <a href="finishing-school.html">Finishing School</a>
+  <a href="employee-engagement.html">Employee Engagement</a>
+  <a href="index.html">Home</a>
+  <a href="index.html#contact" class="mob-cta">Get in Touch</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-grain"></div>
+  <div class="hero-content">
+    <div class="pillar-badge reveal"><div class="badge-dot"></div>Pillar 01 · B2C + Institutional</div>
+    <h1 class="pillar-heading reveal" style="transition-delay:.1s">Campus-to-<br><em>Corporate</em><br>Transformation</h1>
+    <p class="pillar-tagline reveal" style="transition-delay:.2s">"We don't train people. We transform them."</p>
+    <div class="hero-stats reveal" style="transition-delay:.3s">
+      <div class="hs"><div class="hs-num">7.5M</div><div class="hs-label">Graduates produced annually across India</div></div>
+      <div class="hs"><div class="hs-num">&lt;40%</div><div class="hs-label">Considered industry-ready without intervention</div></div>
+      <div class="hs"><div class="hs-num">3×</div><div class="hs-label">Higher retention with identity-led learning</div></div>
+      <div class="hs"><div class="hs-num">70%</div><div class="hs-label">Training forgotten in 2 weeks without identity anchoring</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE GAP -->
+<section class="sec" style="background:var(--cream)">
+  <div class="sec-inner">
+    <div class="eyebrow reveal"><div class="eyebrow-dot" style="background:var(--gold)"></div><span class="eyebrow-txt" style="color:var(--gold)">The Gap We Exist to Close</span></div>
+    <h2 class="sh reveal" style="transition-delay:.1s">The Problem Is Not Knowledge.<br>It's <em>Identity.</em></h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start" class="reveal" style="transition-delay:.15s">
+      <div>
+        <p style="font-size:.95rem;font-weight:300;line-height:1.85;color:#4a4038;margin-bottom:1.25rem;">India produces 7.5 million graduates every year — fewer than 4 in 10 are considered industry-ready on Day 1. They know their subject. They do not know who they are at work.</p>
+        <p style="font-size:.95rem;font-weight:300;line-height:1.85;color:#4a4038;">They have spent four years becoming technically proficient and almost no time becoming professionally real.</p>
+      </div>
+      <div>
+        <p style="font-size:.95rem;font-weight:300;line-height:1.85;color:#4a4038;margin-bottom:1.25rem;">Companies spend billions on onboarding that lasts two weeks and changes nothing — while Gen-Z attrition climbs past 35%.</p>
+        <div style="padding:2rem;background:var(--navy);">
+          <div style="font-size:.7rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;">The Missing Ingredient</div>
+          <p style="font-family:var(--serif);font-style:italic;font-size:1.1rem;font-weight:300;color:var(--cream);line-height:1.65;">Not more content. Not another certificate. <span style="color:var(--gold-light);">Identity. Behaviour. Transformation.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE METHOD -->
+<section class="sec" style="background:#f0f4f8">
+  <div class="sec-inner">
+    <div class="eyebrow reveal"><div class="eyebrow-dot" style="background:var(--gold)"></div><span class="eyebrow-txt" style="color:var(--gold)">The Mélange Method</span></div>
+    <h2 class="sh reveal" style="transition-delay:.1s">Three Layers.<br>One Architecture.</h2>
+    <p class="sub reveal" style="transition-delay:.15s">Most training adds information. The Mélange Method changes identity — and only one of those produces lasting change.</p>
+    <div class="g3">
+      <div class="layer-card reveal" style="border-color:var(--gold);transition-delay:.05s">
+        <div class="lc-n">Layer One</div><div class="lc-t">Identity</div>
+        <div class="lc-sub">Who am I, professionally?</div>
+        <p class="lc-body">Professional identity — values, communication style, relationship to authority — is the foundation. Without it, every skill sits on sand.</p>
+      </div>
+      <div class="layer-card reveal" style="border-color:var(--crimson);transition-delay:.1s">
+        <div class="lc-n">Layer Two</div><div class="lc-t">Behaviour</div>
+        <div class="lc-sub">How do I show up, consistently?</div>
+        <p class="lc-body">This is where insight becomes habit — the repeatable practices that define how a person shows up in meetings, in conflict, when no one is watching. Behaviour is identity made visible.</p>
+      </div>
+      <div class="layer-card reveal" style="border-color:var(--navy);transition-delay:.15s">
+        <div class="lc-n">Layer Three</div><div class="lc-t">Culture</div>
+        <div class="lc-sub">What environment am I building?</div>
+        <p class="lc-body">Culture is what happens when individuals with changed behaviours work together — by design, not default.</p>
+      </div>
+    </div>
+    <div style="padding:2rem;background:var(--navy);margin-top:1px" class="reveal" style="transition-delay:.2s">
+      <p style="font-family:var(--serif);font-size:1.05rem;font-weight:300;color:rgba(249,245,239,.65);line-height:1.7;max-width:820px;">When someone genuinely changes how they see themselves, the learning does not need to be remembered. It is lived.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT 01 -->
+<section class="prod-sec" id="blueprint">
+  <div class="prod-inner">
+    <div class="g4">
+      <div style="position:sticky;top:100px" class="reveal">
+        <div class="prod-num" style="color:var(--gold)">01</div>
+        <div class="prod-lbl" style="color:var(--gold)">Institutions & T&P Teams</div>
+        <div class="prod-ttl">Campus Blueprint</div>
+        <div class="prod-model">3-Month Institution-Embedded Programme</div>
+        <p class="prod-quote">Embedding professional identity into the college calendar before Day 1.</p>
+        <p class="prod-body">A three-month programme inside the college calendar — designed for T&P Officers and Deans measured on placement outcomes.</p>
+        <div class="sidebar-tag"><span class="sidebar-tag-lbl">Who buys it:</span><span class="sidebar-tag-val">T&P Officers, Deans, Vice-Chancellors</span></div>
+      </div>
+      <div class="reveal" style="transition-delay:.15s">
+        <div class="det-row">
+          <div class="det-cell">
+            <div class="det-lbl">What Students Master</div>
+            <ul class="det-list">
+              <li>Professional Identity Formation</li><li>Business Communication</li>
+              <li>Workplace Emotional Intelligence</li><li>Corporate Protocol</li>
+              <li>Personal Goal Architecture</li><li>Digital Professional Presence</li>
+              <li>Interview Simulation</li><li>Offer Negotiation</li>
+              <li>First-Week-at-Work Simulation (capstone)</li>
+            </ul>
+          </div>
+          <div class="det-cell">
+            <div class="det-lbl">Outcomes</div>
+            <ul class="det-list">
+              <li>Students articulate identity in under 60 seconds</li>
+              <li>Placement rates improve measurably</li>
+              <li>New hires ramp up 30% faster</li>
+              <li>Institutional reputation strengthens with recruiters</li>
+              <li>Mélange Certification + Placement Outcome Report</li>
+            </ul>
+            <div class="det-lbl" style="margin-top:1.5rem;">Format</div>
+            <ul class="det-list">
+              <li>12 weeks · 2 sessions per week</li>
+              <li>60–200 students per cohort</li>
+              <li>Blended delivery (in-person + digital)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT 02 -->
+<section class="prod-sec" style="background:#faf6f0" id="flagship">
+  <div class="prod-inner">
+    <div class="g4">
+      <div style="position:sticky;top:100px" class="reveal">
+        <div class="prod-num" style="color:var(--crimson)">02</div>
+        <div class="prod-lbl" style="color:var(--crimson)">Fresh Graduates & HR Teams</div>
+        <div class="prod-ttl">Launch Pad</div>
+        <div class="prod-model">Cohort-Based Transformation</div>
+        <p class="prod-quote">The first year of work is the most formative. Most people spend it figuring things out by accident.</p>
+        <p class="prod-body">For fresh graduates and early-career professionals (0–18 months). Self-investing or employer-sponsored.</p>
+        <div class="sidebar-tag" style="border-color:rgba(120,0,20,.15)"><span class="sidebar-tag-lbl">Who it's for:</span><span class="sidebar-tag-val">Fresh graduates, 0–18 months experience</span></div>
+      </div>
+      <div class="reveal" style="transition-delay:.15s">
+        <div class="det-row">
+          <div class="det-cell">
+            <div class="det-lbl">What Students Master</div>
+            <ul class="det-list">
+              <li>Self-Leadership</li><li>Storytelling & Executive Presence</li>
+              <li>The Art of Feedback</li><li>Professional Personal Branding</li>
+              <li>Workplace Navigation</li><li>Peer Learning Circles</li>
+              <li>The 90-Day Career Blueprint</li>
+              <li>Mélange Alumni Network — lifetime access</li>
+            </ul>
+          </div>
+          <div class="det-cell">
+            <div class="det-lbl">Outcomes</div>
+            <ul class="det-list">
+              <li>40% higher professional confidence at 30 days</li>
+              <li>Higher manager ratings at 6-month mark</li>
+              <li>60% of Year 2 seats filled by alumni referrals</li>
+              <li>Lower first-year attrition</li>
+              <li>90-Day Blueprint + Certificate + Alumni Access</li>
+            </ul>
+            <div class="det-lbl" style="margin-top:1.5rem;">Format</div>
+            <ul class="det-list">
+              <li>30 days · Daily 90-min live session</li>
+              <li>Cohort of 25–40</li><li>Online / offline / hybrid</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT 03 -->
+<section class="prod-sec" id="corporate">
+  <div class="prod-inner">
+    <div class="g4">
+      <div style="position:sticky;top:100px" class="reveal">
+        <div class="prod-num" style="color:var(--navy)">03</div>
+        <div class="prod-lbl" style="color:var(--navy)">CHROs & L&D Heads</div>
+        <div class="prod-ttl">The Corporate Edge</div>
+        <div class="prod-model">Ten Bespoke Corporate Programmes</div>
+        <p class="prod-quote">Each programme is bespoke — delivered at your facility, measured against outcomes you define.</p>
+        <p class="prod-body">For CHROs and L&D Heads at organisations with 200–8,000 employees.</p>
+      </div>
+      <div class="reveal" style="transition-delay:.15s">
+        <div class="g2">
+          <div class="card"><div class="card-lbl" style="color:var(--navy)">01</div><div class="card-ttl">New Joiner Assimilation</div><p class="card-body">Structured onboarding that embeds identity before habits form. 3–5 days, in-person, cohort-based.</p></div>
+          <div class="card"><div class="card-lbl" style="color:var(--navy)">02</div><div class="card-ttl">Campus-to-Corp at Your Facility</div><p class="card-body">The Flagship School delivered inside your organisation's environment. 4–6 weeks, modular, blended.</p></div>
+          <div class="card"><div class="card-lbl" style="color:var(--navy)">03</div><div class="card-ttl">Culture Architecture</div><p class="card-body">Defining and designing the culture deliberately. 2–3 day workshop + 60-day action plan.</p></div>
+          <div class="card"><div class="card-lbl" style="color:var(--navy)">04</div><div class="card-ttl">Psychological Safety & High-Trust Teams</div><p class="card-body">Building the conditions for honest conversation and high performance. 4–6 coaching sessions, groups of 6–10.</p></div>
+          <div class="card"><div class="card-lbl" style="color:var(--navy)">05</div><div class="card-ttl">People Leadership</div><p class="card-body">For managers who need to become leaders. 6-week modular, live sessions + peer cohort.</p></div>
+          <div class="card"><div class="card-lbl" style="color:var(--navy)">06</div><div class="card-ttl">Executive Communication</div><p class="card-body">Presence, clarity, persuasion. 1–2 day intensive, 1:1 coaching, presentation labs.</p></div>
+          <div class="card"><div class="card-lbl" style="color:var(--navy)">07</div><div class="card-ttl">Outbound Leadership Offsites</div><p class="card-body">Genuine outdoor challenge with structured culture debrief. 1–2 days outdoor + indoor.</p></div>
+          <div class="card"><div class="card-lbl" style="color:var(--navy)">08</div><div class="card-ttl">Conflict to Clarity</div><p class="card-body">Turning difficult conversations into productive ones. 1 day intensive, facilitated live scenarios.</p></div>
+          <div class="card"><div class="card-lbl" style="color:var(--navy)">09</div><div class="card-ttl">Change Leadership</div><p class="card-body">Leading people through restructures, transitions, and uncertainty. 2 days + 4-week follow-through.</p></div>
+          <div class="card"><div class="card-lbl" style="color:var(--navy)">10</div><div class="card-ttl">Culture Reinforcement Cycles</div><p class="card-body">Keeping culture alive after the offsite. Pulse surveys, manager accountability tools, 30/60/90-day cadence.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BELIEFS -->
+<section class="dark">
+  <div class="dark-inner">
+    <div style="display:flex;align-items:center;gap:.75rem;font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;" class="reveal">
+      <div style="width:32px;height:1px;background:var(--gold)"></div>What We Believe
+    </div>
+    <h2 style="font-family:var(--serif);font-weight:300;font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.025em;line-height:1.1;color:var(--cream);margin-bottom:3rem;" class="reveal" style="transition-delay:.1s">Three Principles Behind<br><span style="font-style:italic;color:var(--gold-light)">Every Decision</span></h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(184,135,42,.1)">
+      <div class="bc reveal" style="transition-delay:.05s"><div class="bc-n">01</div><div class="bc-t">Identity before skill</div><p class="bc-b">Durable change lives in the person, not the content. You cannot build lasting skill on an unstable sense of self.</p></div>
+      <div class="bc reveal" style="transition-delay:.1s"><div class="bc-n">02</div><div class="bc-t">Measurement is not optional</div><p class="bc-b">We will not deliver a programme we cannot measure — results shared whether they flatter us or not.</p></div>
+      <div class="bc reveal" style="transition-delay:.15s"><div class="bc-n">03</div><div class="bc-t">Transformation is earned</div><p class="bc-b">Our job is to create the conditions. The work is done by the participant. We never pretend otherwise.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLAR NAV -->
+<div class="pnav">
+  <div class="pnav-inner">
+    <a href="employee-engagement.html" class="pnav-card reveal">
+      <div class="pnav-dir">Next Pillar →</div>
+      <div class="pnav-name">Pillar 02 — Employee Engagement</div>
+      <p class="pnav-desc">Experience & Retention Architecture · Nine service lines</p>
+    </a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">Mélange Culture</div>
+    <ul class="flinks"><li><a href="index.html">Home</a></li><li><a href="employee-engagement.html">Employee Engagement</a></li></ul>
+    <p class="footer-copy">© 2026 Mélange Culture. Hyderabad, India.</p>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);}}),{threshold:.07,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();closeMob();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'});}}));
+const ham=document.getElementById('navHamburger'),mob=document.getElementById('mobileMenu');
+function closeMob(){ham.classList.remove('open');mob.classList.remove('open');ham.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+ham.addEventListener('click',()=>{const o=mob.classList.toggle('open');ham.classList.toggle('open',o);ham.setAttribute('aria-expanded',String(o));document.body.style.overflow=o?'hidden':'';});
+mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMob));
+</script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>People Function — Pillar 02 · Mélange Culture</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0B1C3A;--navy-deep:#071327;--crimson:#780014;--gold:#b8872a;--gold-light:#d4a843;--blue:#3a6a8a;--blue-light:#7eb8d4;--cream:#f9f5ef;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+  body{font-family:var(--sans);background:var(--cream);overflow-x:hidden;}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
+  .reveal.visible{opacity:1;transform:translateY(0);}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,19,39,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(184,135,42,.15);}
+  .nav-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;height:72px;display:flex;align-items:center;justify-content:space-between;}
+  .nav-logo img{height:42px;width:auto;}
+  .nav-links{display:flex;align-items:center;gap:.25rem;list-style:none;}
+  .nav-pill{padding:.45rem 1.1rem;font-size:.8rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:rgba(249,245,239,.6);border:1px solid transparent;transition:all .2s;}
+  .nav-pill:hover,.nav-pill.active{color:var(--gold-light);border-color:rgba(184,135,42,.3);background:rgba(184,135,42,.06);}
+  .nav-back{font-size:.78rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:rgba(249,245,239,.5);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:.5rem;}
+  .nav-back:hover{color:var(--gold-light);}
+
+  /* HERO */
+  .hero{position:relative;min-height:72vh;display:flex;align-items:flex-end;background:var(--navy-deep);overflow:hidden;}
+  .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 70% 30%,rgba(58,106,138,.2) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 15% 80%,rgba(184,135,42,.08) 0%,transparent 50%);}
+  .hero-grain{position:absolute;inset:0;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  .hero-content{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:9rem 2.5rem 5rem;width:100%;}
+  .pillar-badge{display:inline-flex;align-items:center;gap:.6rem;padding:.35rem 1rem .35rem .5rem;border:1px solid rgba(126,184,212,.35);font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-light);margin-bottom:2rem;}
+  .badge-dot{width:8px;height:8px;border-radius:50%;background:var(--blue-light);}
+  h1.pillar-heading{font-family:var(--serif);font-weight:300;font-size:clamp(3rem,6vw,6.5rem);letter-spacing:-.03em;line-height:1.04;color:var(--cream);margin-bottom:1.5rem;}
+  h1.pillar-heading em{font-style:italic;color:var(--blue-light);}
+  .pillar-tagline{font-family:var(--serif);font-style:italic;font-size:1.15rem;font-weight:400;color:rgba(249,245,239,.58);padding-left:1.25rem;border-left:2px solid var(--blue-light);margin-bottom:3rem;max-width:560px;line-height:1.6;}
+  .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(126,184,212,.1);border:1px solid rgba(126,184,212,.1);}
+  .hs{padding:1.5rem;background:rgba(7,19,39,.7);}
+  .hs-num{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--blue-light);letter-spacing:-.02em;line-height:1;margin-bottom:.3rem;}
+  .hs-label{font-size:.7rem;font-weight:400;letter-spacing:.07em;text-transform:uppercase;color:rgba(249,245,239,.42);line-height:1.4;}
+
+  .sec{padding:6rem 0;}
+  .sec-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;}
+  .eyebrow{display:inline-flex;align-items:center;gap:.75rem;margin-bottom:1rem;}
+  .eyebrow-dot{width:6px;height:6px;border-radius:50%;}
+  .eyebrow-txt{font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;}
+  h2.sh{font-family:var(--serif);font-weight:300;font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.025em;line-height:1.1;color:var(--navy);margin-bottom:1.25rem;}
+  h2.sh em{font-style:italic;color:var(--blue);}
+  .sub{font-size:.93rem;font-weight:300;line-height:1.82;color:#4a4038;max-width:640px;margin-bottom:3rem;}
+
+  /* METHOD LAYERS */
+  .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,.07);}
+  .layer-card{background:#fff;padding:2.5rem 2rem;border-top:3px solid;}
+  .lc-n{font-size:.72rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;opacity:.4;margin-bottom:.5rem;}
+  .lc-t{font-family:var(--serif);font-size:1.75rem;font-weight:400;color:var(--navy);margin-bottom:.4rem;}
+  .lc-sub{font-size:.75rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#8a7a6e;margin-bottom:1.25rem;}
+  .lc-body{font-size:.9rem;font-weight:300;line-height:1.8;color:#4a4038;}
+
+  /* 8 SERVICE LINES — detailed cards */
+  .sl-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(0,0,0,.07);}
+  .sl-card{background:#fff;padding:2.25rem 2rem;transition:background .25s,transform .25s cubic-bezier(.16,1,.3,1);}
+  .sl-card:hover{background:var(--navy);transform:translateY(-3px);z-index:2;position:relative;}
+  .sl-card:hover .sl-ttl,.sl-card:hover .sl-lbl{color:var(--cream);}
+  .sl-card:hover .sl-body{color:rgba(249,245,239,.52);}
+  .sl-card:hover .sl-tag{color:var(--gold-light);border-color:rgba(212,168,67,.3);}
+  .sl-card:hover .sl-items li{color:rgba(249,245,239,.52);border-color:rgba(255,255,255,.07);}
+  .sl-num{font-family:var(--serif);font-size:1.5rem;font-weight:300;opacity:.2;margin-bottom:1rem;}
+  .sl-lbl{font-size:.67rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;transition:color .25s;}
+  .sl-ttl{font-family:var(--serif);font-size:1.35rem;font-weight:500;color:var(--navy);margin-bottom:.5rem;line-height:1.25;transition:color .25s;}
+  .sl-body{font-size:.85rem;font-weight:300;line-height:1.72;color:#4a4038;margin-bottom:1.25rem;transition:color .25s;}
+  .sl-items{list-style:none;margin-bottom:1.25rem;}
+  .sl-items li{font-size:.8rem;font-weight:300;color:#4a4038;padding:.3rem 0;border-bottom:1px solid rgba(0,0,0,.05);transition:color .25s,border-color .25s;display:flex;align-items:flex-start;gap:.5rem;}
+  .sl-items li::before{content:'·';color:var(--blue);flex-shrink:0;font-size:1.1rem;line-height:1;}
+  .sl-tag{font-size:.7rem;font-weight:500;letter-spacing:.06em;padding:.28rem .6rem;border:1px solid rgba(58,106,138,.2);display:inline-block;transition:color .25s,border-color .25s;}
+
+  /* DARK */
+  .dark{background:var(--navy);padding:6rem 0;}
+  .dark-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;}
+  .bc{background:var(--navy);padding:2rem;transition:background .2s;}
+  .bc:hover{background:rgba(255,255,255,.05);}
+  .bc-n{font-family:var(--serif);font-size:2rem;font-weight:300;color:rgba(126,184,212,.2);margin-bottom:.85rem;}
+  .bc-t{font-family:var(--serif);font-size:1.15rem;font-weight:500;color:var(--cream);margin-bottom:.6rem;}
+  .bc-b{font-size:.86rem;font-weight:300;line-height:1.75;color:rgba(249,245,239,.46);}
+
+  /* IMPACT STRIP */
+  .impact{background:var(--blue);padding:4rem 0;}
+  .impact-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.1);}
+  .ii{padding:2rem 1.75rem;background:var(--blue);text-align:center;}
+  .ii-num{font-family:var(--serif);font-size:3rem;font-weight:300;color:#fff;letter-spacing:-.03em;line-height:1;margin-bottom:.4rem;}
+  .ii-lbl{font-size:.73rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);line-height:1.4;}
+
+  /* PILLAR NAV */
+  .pnav{background:var(--navy-deep);border-top:1px solid rgba(184,135,42,.1);padding:3rem 0;}
+  .pnav-inner{max-width:1280px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+  .pnav-card{padding:2rem;border:1px solid rgba(184,135,42,.1);text-decoration:none;transition:border-color .2s,background .2s;display:block;}
+  .pnav-card:hover{border-color:rgba(184,135,42,.3);background:rgba(255,255,255,.03);}
+  .pnav-dir{font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(249,245,239,.3);margin-bottom:.5rem;}
+  .pnav-name{font-family:var(--serif);font-size:1.4rem;font-weight:400;color:var(--cream);}
+  .pnav-desc{font-size:.83rem;font-weight:300;color:rgba(249,245,239,.4);margin-top:.5rem;line-height:1.6;}
+
+  .footer{background:var(--navy-deep);padding:2.5rem;border-top:1px solid rgba(184,135,42,.08);}
+  .footer-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+  .footer-brand{font-family:var(--serif);font-size:1.2rem;font-weight:300;color:var(--cream);}
+  .flinks{display:flex;gap:1.5rem;list-style:none;}
+  .flinks a{font-size:.78rem;font-weight:300;color:rgba(249,245,239,.35);text-decoration:none;transition:color .2s;}
+  .flinks a:hover{color:var(--gold-light);}
+  .footer-copy{font-size:.75rem;font-weight:300;color:rgba(249,245,239,.25);}
+
+  @media(max-width:1024px){.hero-stats,.sl-grid{grid-template-columns:repeat(2,1fr);}.g3{grid-template-columns:1fr 1fr;}.impact-inner{grid-template-columns:1fr 1fr;}.pnav-inner{grid-template-columns:1fr;}.footer-inner{flex-direction:column;text-align:center;}}
+  @media(max-width:640px){.nav-links{display:none;}.g3,.sl-grid{grid-template-columns:1fr;}.hero-stats{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="../Melange_Culture_Creatives/logo-new.png" alt="Mélange Culture"></a>
+    <ul class="nav-links">
+      <li><a href="finishing-school.html" class="nav-pill">Finishing School</a></li>
+      <li><a href="hr-services.html" class="nav-pill active">People Function</a></li>
+      <li><a href="employee-engagement.html" class="nav-pill">Employee Engagement</a></li>
+    </ul>
+    <a href="index.html" class="nav-back">← Home</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-grain"></div>
+  <div class="hero-content">
+    <div class="pillar-badge reveal"><div class="badge-dot"></div>Pillar 02 · B2B Embedded</div>
+    <h1 class="pillar-heading reveal" style="transition-delay:.1s">The People Function<br>Your Business<br><em>Deserves</em></h1>
+    <p class="pillar-tagline reveal" style="transition-delay:.2s">"We don't manage HR. We build the people function your business deserves."</p>
+    <div class="hero-stats reveal" style="transition-delay:.3s">
+      <div class="hs"><div class="hs-num">3.1M+</div><div class="hs-label">Target businesses with 50–1,000 employees</div></div>
+      <div class="hs"><div class="hs-num">72%</div><div class="hs-label">Lack a dedicated HR leadership function</div></div>
+      <div class="hs"><div class="hs-num">100%</div><div class="hs-label">Payroll accuracy target — non-negotiable</div></div>
+      <div class="hs"><div class="hs-num">&lt;8%</div><div class="hs-label">90-day attrition benchmark vs. 18–22% industry</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="sec" style="background:var(--cream)">
+  <div class="sec-inner">
+    <div class="eyebrow reveal"><div class="eyebrow-dot" style="background:var(--blue)"></div><span class="eyebrow-txt" style="color:var(--blue)">The Gap We Exist to Close</span></div>
+    <h2 class="sh reveal" style="transition-delay:.1s">Too Large to Operate Without HR.<br>Too Small to <em>Build It Internally.</em></h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start" class="reveal" style="transition-delay:.15s">
+      <div>
+        <p style="font-size:.95rem;font-weight:300;line-height:1.85;color:#4a4038;margin-bottom:1.25rem;">India has 3.1 million businesses with 50–1,000 employees. Nearly every one has an HR problem — not from lack of care, but from a structural gap: too large to operate without HR, too small to build it internally.</p>
+        <p style="font-size:.95rem;font-weight:300;line-height:1.85;color:#4a4038;">They need strategic HR leadership but are paying for administrative support. They need cultural architecture but are getting policy documentation.</p>
+      </div>
+      <div>
+        <div style="padding:2rem;background:var(--navy);margin-bottom:1.25rem;">
+          <div style="font-size:.7rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-light);margin-bottom:.75rem;">The Mélange Answer</div>
+          <p style="font-family:var(--serif);font-style:italic;font-size:1.05rem;font-weight:300;color:var(--cream);line-height:1.65;">One partner. The full people function. Zero distinction between "Mélange team" and "our HR team."</p>
+        </div>
+        <p style="font-size:.95rem;font-weight:300;line-height:1.85;color:#4a4038;">We operate as the embedded HR leadership layer — attending SLT meetings, running compliance calendars, managing HR issues in real time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="sec" style="background:#f0f4f8">
+  <div class="sec-inner">
+    <div class="eyebrow reveal"><div class="eyebrow-dot" style="background:var(--blue)"></div><span class="eyebrow-txt" style="color:var(--blue)">The Mélange HR Method</span></div>
+    <h2 class="sh reveal" style="transition-delay:.1s">Three Layers.<br>One People Operating System.</h2>
+    <p class="sub reveal" style="transition-delay:.15s">Most HR vendors deliver outputs. The Mélange HR Method builds an integrated people operating system — three layers, one relationship.</p>
+    <div class="g3">
+      <div class="layer-card reveal" style="border-color:var(--crimson);transition-delay:.05s">
+        <div class="lc-n">Layer One</div><div class="lc-t">Compliance</div>
+        <div class="lc-sub">The floor that protects everything above it</div>
+        <p class="lc-body">PF, ESI, TDS, POSH, labour law — built properly, first. No one builds high-performance culture on a compliance foundation that is cracked.</p>
+      </div>
+      <div class="layer-card reveal" style="border-color:var(--blue);transition-delay:.1s">
+        <div class="lc-n">Layer Two</div><div class="lc-t">Operations</div>
+        <div class="lc-sub">The engine that makes HR run smoothly</div>
+        <p class="lc-body">Payroll, HRSS, recruitment, exit management, HRMS, analytics — the operational layer that gives visibility into people data and the ability to act.</p>
+      </div>
+      <div class="layer-card reveal" style="border-color:var(--gold);transition-delay:.15s">
+        <div class="lc-n">Layer Three</div><div class="lc-t">Culture</div>
+        <div class="lc-sub">The environment that determines whether people stay</div>
+        <p class="lc-body">HRBP-as-a-Service, ESAT, performance management, employer branding — closing the gap between the culture leaders believe they have and the one employees actually experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 SERVICE LINES -->
+<section class="sec" style="background:var(--cream)" id="service-lines">
+  <div class="sec-inner">
+    <div class="eyebrow reveal"><div class="eyebrow-dot" style="background:var(--blue)"></div><span class="eyebrow-txt" style="color:var(--blue)">Eight Service Lines</span></div>
+    <h2 class="sh reveal" style="transition-delay:.1s">One Integrated<br>People Operating System</h2>
+    <p class="sub reveal" style="transition-delay:.15s">Eight moments in the HR lifecycle — delivered as a single integrated relationship, not a collection of disconnected vendors. Every service line connects. Every data point informs the whole.</p>
+    <div class="sl-grid">
+      <div class="sl-card reveal" style="transition-delay:.05s">
+        <div class="sl-num">01</div>
+        <div class="sl-lbl">HRSS</div>
+        <div class="sl-ttl">HR Shared Services</div>
+        <p class="sl-body">The administrative backbone — SLA-governed, structured, and run with the judgement of a senior professional.</p>
+        <ul class="sl-items">
+          <li>HR helpdesk — queries answered within 24 hours</li>
+          <li>Policy drafting, review, and version control</li>
+          <li>Offer, confirmation, warning, exit documentation</li>
+          <li>Digital employee records management</li>
+          <li>Monthly HR MIS: headcount, attrition, compliance</li>
+          <li>Quarterly HR Health Check</li>
+        </ul>
+        <span class="sl-tag">Best for: Startups at 30–200 employees</span>
+      </div>
+      <div class="sl-card reveal" style="transition-delay:.1s" id="payroll">
+        <div class="sl-num">02</div>
+        <div class="sl-lbl">Payroll</div>
+        <div class="sl-ttl">Payroll Processing & Statutory Compliance</div>
+        <p class="sl-body">Accurate. On time. Compliant. Every month. One missed filing triggers penalties that compound daily — we prevent that.</p>
+        <ul class="sl-items">
+          <li>Full-cycle payroll: gross-to-net, deductions, arrears, LOP</li>
+          <li>Digital payslip generation — every employee, every month</li>
+          <li>TDS computation, quarterly Form 24Q, annual Form 16</li>
+          <li>PF, ESI, PT, LWF — monthly remittance and filing</li>
+          <li>Full & Final settlement within 30 days of exit</li>
+          <li>Monthly payroll audit and reconciliation</li>
+        </ul>
+        <span class="sl-tag">Target: 100% payroll accuracy — non-negotiable</span>
+      </div>
+      <div class="sl-card reveal" style="transition-delay:.15s" id="posh">
+        <div class="sl-num">03</div>
+        <div class="sl-lbl">POSH & Legal</div>
+        <div class="sl-ttl">Statutory, Legal & POSH Compliance</div>
+        <p class="sl-body">POSH non-compliance is personal liability for directors. Most organisations under 300 employees have never constituted an ICC.</p>
+        <ul class="sl-items">
+          <li>ICC constitution — formally appointing required members</li>
+          <li>POSH policy drafting — specific, legally compliant</li>
+          <li>Annual POSH training — live, facilitated, with records</li>
+          <li>Complaint management protocol — documented and rehearsed</li>
+          <li>Annual POSH report filed with the district officer</li>
+          <li>Full statutory compliance calendar management</li>
+        </ul>
+        <span class="sl-tag">Non-negotiable: included in all tiers</span>
+      </div>
+      <div class="sl-card reveal" style="transition-delay:.2s">
+        <div class="sl-num">04</div>
+        <div class="sl-lbl">Recruitment</div>
+        <div class="sl-ttl">Recruitment & Talent Acquisition</div>
+        <p class="sl-body">We fill roles with people who can do the job and fit the culture — and will still be there in 18 months.</p>
+        <ul class="sl-items">
+          <li>Retained search, contingency, and RPO models</li>
+          <li>Every candidate assessed for professional readiness</li>
+          <li>Linked to Mélange alumni pipeline from Pillar 1</li>
+          <li>Replacement guarantee (30–90 days depending on model)</li>
+          <li>Employer brand advisory included</li>
+          <li>Time-to-fill benchmark: 28 days for mid-level roles</li>
+        </ul>
+        <span class="sl-tag">Offer acceptance rate tracked every mandate</span>
+      </div>
+      <div class="sl-card reveal" style="transition-delay:.25s" id="hrbp">
+        <div class="sl-num">05</div>
+        <div class="sl-lbl">HRBP</div>
+        <div class="sl-ttl">HRBP as a Service</div>
+        <p class="sl-body">A senior people professional embedded in the business — attending SLT meetings, advising on org design, coaching managers.</p>
+        <ul class="sl-items">
+          <li>Attendance at SLT and leadership meetings</li>
+          <li>Organisational design advisory</li>
+          <li>Manager coaching — on actual challenges they face</li>
+          <li>Workforce planning and succession mapping</li>
+          <li>People data interpretation — ESAT, attrition, payroll</li>
+          <li>Change management: restructures, leadership transitions</li>
+        </ul>
+        <span class="sl-tag">Metrics: eNPS trajectory + 90-day attrition rate</span>
+      </div>
+      <div class="sl-card reveal" style="transition-delay:.3s">
+        <div class="sl-num">06</div>
+        <div class="sl-lbl">Exit</div>
+        <div class="sl-ttl">Exit Management</div>
+        <p class="sl-body">How people leave shapes who decides to join. Every exit is a brand moment — managed well or managed poorly.</p>
+        <ul class="sl-items">
+          <li>Structured exit interview facilitation — surfacing real reasons</li>
+          <li>F&F settlement — computed, documented, within 30 days</li>
+          <li>Clearance management — IT, finance, admin owned by Mélange</li>
+          <li>Attrition analytics — quarterly pattern identification</li>
+          <li>Alumni network seeding into Pillar 3 programme</li>
+        </ul>
+        <span class="sl-tag">Metric: Glassdoor rating trend + rehire pipeline</span>
+      </div>
+      <div class="sl-card reveal" style="transition-delay:.35s">
+        <div class="sl-num">07</div>
+        <div class="sl-lbl">ESAT</div>
+        <div class="sl-ttl">ESAT, eNPS & Culture Mapping</div>
+        <p class="sl-body">Mélange ESAT is designed for truth — not manageable data. Administered consistently, translated into actions leadership can execute.</p>
+        <ul class="sl-items">
+          <li>Annual ESAT — custom, quantitative and qualitative</li>
+          <li>eNPS — directional trajectory, not just position</li>
+          <li>Quarterly pulse check — 5–8 questions, early warning</li>
+          <li>Culture mapping diagnostic — actual vs. believed</li>
+          <li>People Health Report — quarterly narrative to leadership</li>
+          <li>Action planning — Mélange co-designs the response</li>
+        </ul>
+        <span class="sl-tag">Benchmark: eNPS above 25 · Every cycle + debrief</span>
+      </div>
+      <div class="sl-card reveal" style="transition-delay:.4s">
+        <div class="sl-num">08</div>
+        <div class="sl-lbl">PMS</div>
+        <div class="sl-ttl">Performance Management Systems</div>
+        <p class="sl-body">A PMS people actually use is a conversation architecture — not the annual appraisal dreaded in equal measure by everyone in the room.</p>
+        <ul class="sl-items">
+          <li>PMS framework design — goals, competencies, rating scales</li>
+          <li>Goal-setting facilitation — Mélange runs the cycle</li>
+          <li>Mid-year review coordination</li>
+          <li>Appraisal cycle management — calibration and moderation</li>
+          <li>Manager coaching on performance conversations</li>
+          <li>PMS analytics — distribution reports, bell curve, equity</li>
+        </ul>
+        <span class="sl-tag">Metric: PMS completion rate + manager effectiveness</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<div class="impact">
+  <div class="impact-inner">
+    <div class="ii reveal"><div class="ii-num" data-target="100" data-suffix="%">100%</div><div class="ii-lbl">Payroll accuracy target — non-negotiable</div></div>
+    <div class="ii reveal" style="transition-delay:.1s"><div class="ii-num">&lt;8%</div><div class="ii-lbl">90-day attrition vs. 18–22% industry</div></div>
+    <div class="ii reveal" style="transition-delay:.2s"><div class="ii-num" data-target="55" data-suffix="+">55+</div><div class="ii-lbl">Client NPS benchmark</div></div>
+    <div class="ii reveal" style="transition-delay:.3s"><div class="ii-num" data-target="90" data-suffix="%+">90%+</div><div class="ii-lbl">Client retention at 6-month renewal</div></div>
+  </div>
+</div>
+
+<!-- BELIEFS -->
+<section class="dark">
+  <div class="dark-inner">
+    <div style="display:flex;align-items:center;gap:.75rem;font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--blue-light);margin-bottom:1rem;" class="reveal">
+      <div style="width:32px;height:1px;background:var(--blue-light)"></div>What We Believe
+    </div>
+    <h2 style="font-family:var(--serif);font-weight:300;font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.025em;line-height:1.1;color:var(--cream);margin-bottom:3rem;" class="reveal" style="transition-delay:.1s">Three Principles Behind<br><span style="font-style:italic;color:var(--blue-light)">Every Engagement</span></h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(126,184,212,.1)">
+      <div class="bc reveal" style="transition-delay:.05s"><div class="bc-n">01</div><div class="bc-t">Compliance is the floor of everything</div><p class="bc-b">No one builds high-performance culture on a cracked compliance foundation. PF, ESI, POSH, TDS — this is the precondition for everything else.</p></div>
+      <div class="bc reveal" style="transition-delay:.1s"><div class="bc-n">02</div><div class="bc-t">HR without measurement is activity</div><p class="bc-b">The quarterly People Health Report is the mechanism by which we hold ourselves accountable. Measurement makes HR a business function, not a support function.</p></div>
+      <div class="bc reveal" style="transition-delay:.15s"><div class="bc-n">03</div><div class="bc-t">Embedded is a philosophy, not a model</div><p class="bc-b">We attend SLT meetings, manage HR issues in real time, and operate with zero distinction between "Mélange team" and "our HR team."</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLAR NAV -->
+<div class="pnav">
+  <div class="pnav-inner">
+    <a href="finishing-school.html" class="pnav-card reveal">
+      <div class="pnav-dir">← Previous Pillar</div>
+      <div class="pnav-name">Pillar 01 — Finishing School</div>
+      <p class="pnav-desc">Campus-to-Corporate Transformation · B2C + Institutional</p>
+    </a>
+    <a href="employee-engagement.html" class="pnav-card reveal" style="transition-delay:.1s">
+      <div class="pnav-dir">Next Pillar →</div>
+      <div class="pnav-name">Pillar 03 — Employee Engagement</div>
+      <p class="pnav-desc">Experience & Retention Architecture · Nine service lines</p>
+    </a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">Mélange Culture</div>
+    <ul class="flinks"><li><a href="index.html">Home</a></li><li><a href="finishing-school.html">Finishing School</a></li><li><a href="employee-engagement.html">Employee Engagement</a></li></ul>
+    <p class="footer-copy">© 2026 Mélange Culture. Hyderabad, India.</p>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);}}),{threshold:.07,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+function easeOutQuart(t){return 1-Math.pow(1-t,4);}
+function animateCounter(el){const raw=el.dataset.target;if(!raw)return;const target=parseFloat(raw),suffix=el.dataset.suffix||'',isDecimal=raw.includes('.');const dur=1800,start=performance.now();function step(now){const p=Math.min((now-start)/dur,1);el.textContent=(isDecimal?((target*easeOutQuart(p)).toFixed(1)):(Math.round(target*easeOutQuart(p))))+suffix;if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+const cio=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){animateCounter(x.target);cio.unobserve(x.target);}}),{threshold:.5});
+document.querySelectorAll('[data-target]').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>
